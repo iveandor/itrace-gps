@@ -3,43 +3,43 @@
         xmlns:xhtml="http://www.w3.org/1999/xhtml">
 
   <url>
-    <loc>https://ilogtracker.com/</loc>
+    <loc>https://itrace.iveandor.com/</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ilogtracker.com/"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/"/>
   </url>
 
   <url>
-    <loc>https://ilogtracker.com/user_guide.html</loc>
+    <loc>https://itrace.iveandor.com/user_guide.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ilogtracker.com/user_guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/user_guide.html"/>
   </url>
 
   <url>
-    <loc>https://ilogtracker.com/permissions_guide.html</loc>
+    <loc>https://itrace.iveandor.com/permissions_guide.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ilogtracker.com/permissions_guide.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/permissions_guide.html"/>
   </url>
 
   <url>
-    <loc>https://ilogtracker.com/privacy_policy.html</loc>
+    <loc>https://itrace.iveandor.com/privacy_policy.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ilogtracker.com/privacy_policy.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/privacy_policy.html"/>
   </url>
 
   <url>
-    <loc>https://ilogtracker.com/terms_of_use.html</loc>
+    <loc>https://itrace.iveandor.com/terms_of_use.html</loc>
     <lastmod>2026-05-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
-    <xhtml:link rel="alternate" hreflang="ko" href="https://ilogtracker.com/terms_of_use.html"/>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/terms_of_use.html"/>
   </url>
 
 </urlset>
