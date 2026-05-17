@@ -1,0 +1,790 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>개인정보 처리방침 — iLogTracker</title>
+<!-- SEO -->
+<meta name="description" content="iLogTracker 서비스(iLog·iLogMobile·iTrace)의 개인정보 수집·이용·보관·파기 방침을 안내합니다." />
+<meta name="keywords" content="iLogTracker 개인정보처리방침, 위치정보 보호, 개인정보 보관, iTrace 개인정보" />
+<meta name="author" content="iveandor" />
+<meta name="robots" content="index, follow" />
+<link rel="canonical" href="https://ilogtracker.com/privacy_policy.html" />
+<!-- Open Graph -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="iLogTracker" />
+<meta property="og:title" content="개인정보 처리방침 — iLogTracker" />
+<meta property="og:description" content="iLogTracker 서비스의 개인정보 수집·이용·보관·파기 방침을 안내합니다." />
+<meta property="og:url" content="https://ilogtracker.com/privacy_policy.html" />
+<meta property="og:locale" content="ko_KR" />
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="개인정보 처리방침 — iLogTracker" />
+<meta name="twitter:description" content="iLogTracker 서비스의 개인정보 수집·이용·보관·파기 방침을 안내합니다." />
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "WebPage",
+      "@id": "https://ilogtracker.com/privacy_policy.html",
+      "url": "https://ilogtracker.com/privacy_policy.html",
+      "name": "개인정보 처리방침",
+      "description": "iLogTracker 서비스의 개인정보 수집·이용·보관·파기 방침",
+      "inLanguage": "ko-KR",
+      "isPartOf": { "@id": "https://ilogtracker.com/#website" },
+      "publisher": {
+        "@type": "Organization",
+        "name": "iveandor",
+        "url": "https://ilogtracker.com"
+      }
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "홈", "item": "https://ilogtracker.com/" },
+        { "@type": "ListItem", "position": 2, "name": "개인정보 처리방침", "item": "https://ilogtracker.com/privacy_policy.html" }
+      ]
+    }
+  ]
+}
+</script>
+<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+<link rel="stylesheet" as="style" crossorigin
+      href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable.css" />
+<style>
+  :root {
+    --coral: #FF7A45;
+    --coral-dark: #E05A25;
+    --coral-tint: #FFF1E6;
+    --cream: #FBF6EF;
+    --cream-deep: #F4EDE1;
+    --surface: #FFFFFF;
+    --ink: #1A1A1A;
+    --ink-2: #3C3C3C;
+    --ink-muted: #6B6B6B;
+    --ink-faint: #9E9E9E;
+    --line: rgba(26, 26, 26, 0.08);
+    --line-strong: rgba(26, 26, 26, 0.14);
+    --r-card: 16px;
+    --r-hero: 24px;
+    --r-pill: 999px;
+    --shadow-1: 0 1px 2px rgba(26,26,26,.04), 0 2px 6px rgba(26,26,26,.04);
+    --shadow-2: 0 4px 12px rgba(26,26,26,.06), 0 12px 32px rgba(26,26,26,.06);
+    --ease: cubic-bezier(.2,0,0,1);
+    --container: 1120px;
+    --nav-h: 68px;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; -webkit-text-size-adjust: 100%; }
+  body {
+    margin: 0;
+    font-family: 'Pretendard Variable', 'Pretendard', 'Inter', -apple-system,
+                 BlinkMacSystemFont, 'Apple SD Gothic Neo', 'Noto Sans KR', sans-serif;
+    font-weight: 450;
+    color: var(--ink);
+    background: var(--cream);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+  }
+  a { color: inherit; text-decoration: none; }
+  ::selection { background: var(--coral); color: #fff; }
+
+  .container { max-width: var(--container); margin: 0 auto; padding: 0 24px; }
+
+  /* ---------- Nav (matches landing) ---------- */
+  .nav {
+    position: sticky; top: 0; z-index: 50;
+    height: var(--nav-h);
+    backdrop-filter: saturate(140%) blur(12px);
+    -webkit-backdrop-filter: saturate(140%) blur(12px);
+    background: rgba(251, 246, 239, 0.72);
+    border-bottom: 1px solid transparent;
+    transition: border-color .25s var(--ease), background-color .25s var(--ease);
+  }
+  .nav.is-scrolled {
+    border-bottom-color: var(--line);
+    background: rgba(251, 246, 239, 0.88);
+  }
+  .nav__inner {
+    height: 100%; display: flex; align-items: center; justify-content: space-between;
+  }
+  .brand {
+    display: inline-flex; align-items: center; gap: 10px;
+    font-weight: 700; font-size: 17px; letter-spacing: -0.01em;
+    color: var(--ink);
+  }
+  .brand__mark {
+    width: 28px; height: 28px;
+    display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+    border-radius: 9px;
+    box-shadow: 0 4px 10px rgba(255,122,69,.35);
+  }
+  .brand__mark svg { width: 16px; height: 16px; color: #fff; }
+  .nav__back {
+    display: inline-flex; align-items: center; gap: 6px;
+    height: 40px; padding: 0 14px;
+    border-radius: var(--r-pill);
+    background: rgba(255,255,255,.7);
+    box-shadow: inset 0 0 0 1px var(--line);
+    font-size: 13.5px; font-weight: 500;
+    color: var(--ink-2);
+    transition: background-color .2s, color .2s, transform .2s;
+  }
+  .nav__back:hover { background: #fff; color: var(--ink); transform: translateX(-2px); }
+  .nav__back svg { width: 14px; height: 14px; }
+
+  /* ---------- Page header ---------- */
+  .ph {
+    position: relative;
+    padding: 72px 0 56px;
+    overflow: hidden;
+    isolation: isolate;
+  }
+  .ph::before {
+    content: ""; position: absolute; inset: -10% -10% 0 -10%; z-index: -1;
+    background:
+      radial-gradient(50% 50% at 85% 0%, rgba(255,122,69,.16) 0%, transparent 60%),
+      radial-gradient(40% 40% at 10% 100%, rgba(255,174,128,.14) 0%, transparent 65%);
+  }
+  .ph__eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 30px; padding: 0 14px;
+    border-radius: var(--r-pill);
+    background: rgba(255,255,255,.7);
+    box-shadow: inset 0 0 0 1px var(--line);
+    font-size: 12.5px; font-weight: 600; color: var(--coral-dark);
+    letter-spacing: .02em; text-transform: uppercase;
+  }
+  .ph__eyebrow svg { width: 14px; height: 14px; color: var(--coral); }
+  .ph h1 {
+    margin: 18px 0 14px;
+    font-size: clamp(32px, 4vw, 48px);
+    font-weight: 800;
+    letter-spacing: -0.03em;
+    line-height: 1.15;
+  }
+  .ph__intro {
+    max-width: 720px;
+    color: var(--ink-muted);
+    font-size: 15.5px;
+    line-height: 1.7;
+    margin: 0 0 24px;
+  }
+  .ph__meta {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-size: 13.5px; color: var(--ink-muted);
+  }
+  .ph__meta .item {
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .ph__meta .item .dot {
+    width: 6px; height: 6px; border-radius: 50%;
+    background: var(--coral);
+  }
+  .ph__meta .item strong {
+    color: var(--ink); font-weight: 600;
+  }
+
+  /* ---------- Doc layout ---------- */
+  .doc {
+    display: grid;
+    grid-template-columns: 240px 1fr;
+    gap: 56px;
+    padding: 48px 0 96px;
+    align-items: start;
+  }
+  @media (max-width: 960px) {
+    .doc { grid-template-columns: 1fr; gap: 32px; padding: 32px 0 64px; }
+  }
+
+  /* TOC */
+  .toc {
+    position: sticky;
+    top: calc(var(--nav-h) + 24px);
+    align-self: start;
+    font-size: 13.5px;
+  }
+  .toc__label {
+    font-size: 11.5px; font-weight: 700;
+    letter-spacing: .08em;
+    color: var(--ink-faint);
+    text-transform: uppercase;
+    margin: 0 0 14px;
+    padding-left: 14px;
+  }
+  .toc__list { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 2px; }
+  .toc__list a {
+    display: block;
+    padding: 8px 14px;
+    border-radius: 10px;
+    color: var(--ink-muted);
+    line-height: 1.4;
+    transition: background-color .15s, color .15s;
+    border-left: 2px solid transparent;
+  }
+  .toc__list a:hover { color: var(--ink); background: rgba(26,26,26,.04); }
+  .toc__list a.is-active {
+    color: var(--coral-dark);
+    background: var(--coral-tint);
+    border-left-color: var(--coral);
+    font-weight: 600;
+  }
+  @media (max-width: 960px) {
+    .toc { position: static; }
+    .toc__list { display: grid; grid-template-columns: repeat(2, 1fr); gap: 4px; }
+  }
+
+  /* Content */
+  .content { min-width: 0; }
+  .content section {
+    background: var(--surface);
+    border-radius: var(--r-hero);
+    border: 1px solid var(--line);
+    padding: 36px 40px;
+    margin-bottom: 16px;
+    box-shadow: var(--shadow-1);
+    scroll-margin-top: 96px;
+  }
+  @media (max-width: 600px) { .content section { padding: 28px 22px; } }
+
+  .content h2 {
+    margin: 0 0 16px;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: -0.015em;
+    color: var(--ink);
+    display: flex; align-items: baseline; gap: 14px;
+    line-height: 1.3;
+  }
+  .content h2 .n {
+    flex-shrink: 0;
+    display: inline-flex; align-items: center; justify-content: center;
+    min-width: 32px; height: 24px; padding: 0 8px;
+    border-radius: 8px;
+    background: var(--coral-tint);
+    color: var(--coral-dark);
+    font-size: 13px; font-weight: 700;
+    letter-spacing: 0;
+    position: relative; top: -2px;
+  }
+  .content p, .content li {
+    color: var(--ink-2);
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .content p { margin: 0 0 12px; }
+  .content p + p { margin-top: -4px; }
+  .content ul {
+    margin: 12px 0 0;
+    padding-left: 0;
+    list-style: none;
+    display: flex; flex-direction: column; gap: 10px;
+  }
+  .content ul li {
+    padding-left: 26px;
+    position: relative;
+  }
+  .content ul li::before {
+    content: "";
+    position: absolute;
+    left: 8px; top: 11px;
+    width: 6px; height: 6px;
+    border-radius: 50%;
+    background: var(--coral);
+  }
+  .content ul li strong { color: var(--ink); font-weight: 600; }
+  .content .note {
+    margin-top: 16px;
+    padding: 14px 16px;
+    background: var(--coral-tint);
+    border-radius: 12px;
+    color: var(--coral-dark);
+    font-size: 13.5px;
+    line-height: 1.65;
+    display: flex; gap: 10px; align-items: flex-start;
+  }
+  .content .note svg {
+    flex-shrink: 0;
+    width: 16px; height: 16px; margin-top: 3px; color: var(--coral);
+  }
+  .content .note p { color: var(--coral-dark); margin: 0; font-size: 13.5px; line-height: 1.65; }
+  .content .note p + p { margin-top: 4px; }
+
+  /* Tables */
+  .table-wrap {
+    margin: 18px 0 4px;
+    border-radius: 14px;
+    border: 1px solid var(--line);
+    overflow: hidden;
+    background: #fff;
+  }
+  .content table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 14px;
+  }
+  .content thead th {
+    background: var(--cream);
+    color: var(--ink);
+    font-weight: 700;
+    font-size: 12.5px;
+    letter-spacing: 0;
+    text-align: left;
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+  }
+  .content tbody td {
+    padding: 14px 16px;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-2);
+    line-height: 1.6;
+    vertical-align: top;
+  }
+  .content tbody tr:last-child td { border-bottom: none; }
+  .content tbody tr:hover td { background: rgba(255,122,69,.03); }
+  .content tbody td:first-child {
+    font-weight: 600;
+    color: var(--ink);
+    white-space: nowrap;
+  }
+  @media (max-width: 600px) {
+    .content tbody td:first-child { white-space: normal; }
+    .content thead th, .content tbody td { padding: 10px 12px; font-size: 13px; }
+  }
+
+  /* Sub-list inside section (e.g. contact info) */
+  .content .sub-block { margin-top: 16px; }
+  .content .sub-block + .sub-block { margin-top: 18px; }
+  .content .sub-block__title {
+    font-size: 14px; font-weight: 700; color: var(--ink);
+    margin-bottom: 8px;
+    display: inline-flex; align-items: center; gap: 8px;
+  }
+  .content .sub-block__title .marker {
+    width: 18px; height: 18px; border-radius: 6px;
+    background: var(--coral-tint); color: var(--coral-dark);
+    font-size: 11px; font-weight: 800;
+    display: grid; place-items: center;
+  }
+
+  /* Contact card */
+  .contact-card {
+    margin-top: 56px;
+    background: linear-gradient(135deg, var(--coral) 0%, var(--coral-dark) 100%);
+    color: #fff;
+    border-radius: var(--r-hero);
+    padding: 36px 40px;
+    display: flex; align-items: center; justify-content: space-between;
+    gap: 24px; flex-wrap: wrap;
+    box-shadow: 0 14px 36px rgba(255,122,69,.25);
+  }
+  .contact-card h3 {
+    margin: 0 0 6px; font-size: 20px; font-weight: 700; letter-spacing: -.015em;
+  }
+  .contact-card p { margin: 0; opacity: .9; font-size: 14.5px; }
+  .contact-card a {
+    display: inline-flex; align-items: center; gap: 8px;
+    height: 48px; padding: 0 22px;
+    border-radius: var(--r-pill);
+    background: #fff; color: var(--ink);
+    font-weight: 600; font-size: 14.5px;
+    transition: transform .2s, box-shadow .2s;
+    box-shadow: 0 4px 12px rgba(0,0,0,.12);
+  }
+  .contact-card a:hover { transform: translateY(-2px); box-shadow: 0 10px 24px rgba(0,0,0,.20); }
+  .contact-card a svg { width: 16px; height: 16px; }
+
+  /* Footer */
+  footer {
+    background: #fff;
+    border-top: 1px solid var(--line);
+    padding: 48px 0 36px;
+    margin-top: 64px;
+  }
+  .foot {
+    display: grid;
+    grid-template-columns: 1.4fr 1fr;
+    gap: 32px;
+    align-items: start;
+  }
+  @media (max-width: 768px) { .foot { grid-template-columns: 1fr; } }
+  .foot__brand { display: flex; flex-direction: column; gap: 10px; }
+  .foot__brand .tagline { font-size: 14px; color: var(--ink-muted); }
+  .foot__links {
+    display: flex; gap: 24px; flex-wrap: wrap;
+    font-size: 14px; color: var(--ink-2);
+  }
+  .foot__links a:hover { color: var(--coral-dark); }
+  .foot__links a.is-current { color: var(--coral-dark); font-weight: 600; }
+  .foot__copy {
+    margin-top: 32px;
+    padding-top: 20px;
+    border-top: 1px solid var(--line);
+    font-size: 13px; color: var(--ink-faint);
+    display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
+  }
+
+  /* Print: tidy layout */
+  @media print {
+    .nav, .toc, .contact-card, footer, .ph::before { display: none !important; }
+    .doc { grid-template-columns: 1fr; padding: 0; gap: 0; }
+    .content section { box-shadow: none; border-color: var(--line); page-break-inside: avoid; }
+    body { background: #fff; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ============ NAV ============ -->
+<nav class="nav" id="nav">
+  <div class="container nav__inner">
+    <a class="brand" href="index.html" aria-label="iLogTracker home">
+      <span class="brand__mark" aria-hidden="true">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13z"/>
+          <circle cx="12" cy="9" r="2.5"/>
+        </svg>
+      </span>
+      iLogTracker
+    </a>
+    <a class="nav__back" href="index.html">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 12H5"/><path d="M11 6l-6 6 6 6"/></svg>
+      홈으로 돌아가기
+    </a>
+  </div>
+</nav>
+
+<!-- ============ HEADER ============ -->
+<header class="ph">
+  <div class="container">
+    <span class="ph__eyebrow">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z"/></svg>
+      Legal · Privacy
+    </span>
+    <h1>개인정보 처리방침</h1>
+    <p class="ph__intro">
+      강일구(이하 "회사")는 iLog · iTrace · iLogMobile 서비스(이하 "서비스") 이용자의 개인정보를 소중히 여기며,
+      「개인정보 보호법」 및 「위치정보의 보호 및 이용 등에 관한 법률」을 준수합니다.
+    </p>
+    <div class="ph__meta">
+      <span class="item"><span class="dot"></span>최종 수정일 <strong>2026. 5. 6.</strong></span>
+      <span class="item"><span class="dot"></span>시행일 <strong>2026. 5. 6.</strong></span>
+      <span class="item"><span class="dot"></span>적용 서비스 <strong>iLog · iLogMobile · iTrace</strong></span>
+    </div>
+  </div>
+</header>
+
+<!-- ============ DOC ============ -->
+<div class="container">
+  <div class="doc">
+
+    <!-- TOC -->
+    <aside class="toc" aria-label="목차">
+      <p class="toc__label">목차</p>
+      <ol class="toc__list">
+        <li><a href="#s1">제1조 수집 항목</a></li>
+        <li><a href="#s2">제2조 이용 목적</a></li>
+        <li><a href="#s3">제3조 보유 기간</a></li>
+        <li><a href="#s4">제4조 제3자 제공</a></li>
+        <li><a href="#s5">제5조 처리 위탁</a></li>
+        <li><a href="#s6">제6조 파기 절차</a></li>
+        <li><a href="#s7">제7조 이용자 권리</a></li>
+        <li><a href="#s8">제8조 보호의무자</a></li>
+        <li><a href="#s9">제9조 확인자료 보유</a></li>
+        <li><a href="#s10">제10조 보호책임자</a></li>
+        <li><a href="#s11">제11조 방침 변경</a></li>
+      </ol>
+    </aside>
+
+    <!-- Content -->
+    <main class="content">
+
+      <!-- §1 -->
+      <section id="s1">
+        <h2><span class="n">1</span>수집하는 개인정보 항목</h2>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr><th>구분</th><th>수집 항목</th><th>수집 방법</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>계정 정보</td>
+                <td>Google 계정 이름, 이메일 주소, 프로필 사진 URL</td>
+                <td>Google 소셜 로그인</td>
+              </tr>
+              <tr>
+                <td>기기 식별 정보</td>
+                <td>기기 고유 식별자(UID), FCM 푸시 토큰</td>
+                <td>앱 최초 실행 시 자동 생성</td>
+              </tr>
+              <tr>
+                <td>위치 정보</td>
+                <td>위도, 경도, 위치 측정 시각, 활동 상태(이동/정지)</td>
+                <td>GPS / Wi-Fi / 기지국 자동 수집</td>
+              </tr>
+              <tr>
+                <td>기기 상태 정보</td>
+                <td>배터리 잔량, 충전 여부, 추적 활성화 여부</td>
+                <td>앱 자동 수집</td>
+              </tr>
+              <tr>
+                <td>SOS 관련 정보</td>
+                <td>SOS 발생 시각, 발생 위치 좌표</td>
+                <td>이용자 직접 트리거 또는 앱 자동 감지</td>
+              </tr>
+              <tr>
+                <td>SOS 음성·영상 녹음 (선택)</td>
+                <td>SOS 발생 시 수집된 음성 또는 영상+음성 파일</td>
+                <td>SOS 발생 시 자동 녹음/녹화 (iLog · iLogMobile)</td>
+              </tr>
+              <tr>
+                <td>원격 모니터링 파일 (선택)</td>
+                <td>보호자 요청에 의해 수집된 음성 또는 영상+음성 파일</td>
+                <td>iTrace 보호자 요청 → iLogMobile 자동 녹음/녹화</td>
+              </tr>
+              <tr>
+                <td>구독 및 결제 정보</td>
+                <td>구독 상태, 구독 플랜, 구독 만료일, 앱 스토어 구매 식별자</td>
+                <td>App Store / Google Play 결제 완료 시 자동 수집</td>
+              </tr>
+              <tr>
+                <td>오류·충돌 정보</td>
+                <td>앱 충돌 시 스택 트레이스, 기기 모델, OS 버전</td>
+                <td>Firebase Crashlytics 자동 수집 (앱 비정상 종료 시)</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="note">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+          <div>
+            <p>Android Watch(iLog)는 별도 회원가입 없이 Galaxy Watch에 연결된 Google 계정으로 자동 인증됩니다.</p>
+            <p>iLog(Galaxy Watch)는 SOS 발생 시 주변 음성만 녹음하며, iLogMobile(스마트폰)은 SOS 발생 시 주변 영상+음성을 녹화합니다.</p>
+            <p>원격 모니터링(스트리밍)은 iLogMobile(스마트폰) 전용 기능이며, Android Watch(iLog)는 지원하지 않습니다.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- §2 -->
+      <section id="s2">
+        <h2><span class="n">2</span>개인정보 수집 및 이용 목적</h2>
+        <ul>
+          <li>실시간 위치 공유 및 지도 서비스 제공</li>
+          <li>이동 경로 이력 저장 및 조회 기능 제공</li>
+          <li>안심존(지오펜스) 진입·이탈 알림 서비스</li>
+          <li>SOS 긴급 알림 발송 및 보호자 통보</li>
+          <li>원격 음성 모니터링 기능 제공 (iLogMobile 기기에 한함)</li>
+          <li>위치 수집 주기 원격 동기화</li>
+          <li>기기 무신호 감지 알림 제공 (6시간 이상 위치 미수신 시 보호자에게 알림)</li>
+          <li>앱 오류·충돌 분석 및 안정성 개선</li>
+          <li>구독 유효성 확인 및 서비스 이용 권한 관리</li>
+          <li>고객 문의 응대</li>
+        </ul>
+      </section>
+
+      <!-- §3 -->
+      <section id="s3">
+        <h2><span class="n">3</span>개인정보 보유 및 이용기간</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>항목</th><th>보유기간</th></tr></thead>
+            <tbody>
+              <tr><td>계정 정보</td><td>회원 탈퇴 시까지</td></tr>
+              <tr><td>위치 이력 데이터</td><td>수집 시점으로부터 최대 10일 후 자동 삭제</td></tr>
+              <tr><td>실시간 위치 (최신값)</td><td>서비스 이용 중 유지, 탈퇴 또는 연결 해제 시 삭제</td></tr>
+              <tr><td>위치정보 이용·제공사실 확인자료</td><td>6개월 (위치정보법 제16조 제2항)</td></tr>
+              <tr><td>FCM 푸시 토큰</td><td>회원 탈퇴 시까지</td></tr>
+              <tr><td>SOS 음성·영상 녹음 파일</td><td>수집 후 10일 후 자동 삭제. 이용자 직접 삭제 또는 회원 탈퇴 시 즉시 삭제</td></tr>
+              <tr><td>SOS 세션 기록</td><td>수집 후 10일 후 자동 삭제</td></tr>
+              <tr><td>원격 모니터링 파일 (음성·영상)</td><td>수집 후 10일 후 자동 삭제. 이용자 직접 삭제 또는 회원 탈퇴 시 즉시 삭제</td></tr>
+              <tr><td>원격 모니터링 세션 기록</td><td>수집 후 10일 후 자동 삭제</td></tr>
+              <tr><td>구독 및 결제 정보</td><td>회원 탈퇴 시까지 (앱 스토어 환불 처리 등 정산 목적으로 탈퇴 후 최대 30일 보관 가능)</td></tr>
+              <tr><td>초대 코드 정보</td><td>발급 후 24시간 또는 사용 완료 시 자동 삭제</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p style="margin-top:14px;">법령에 의해 보관이 필요한 경우 해당 법령에서 정한 기간 동안 보관 후 파기합니다.</p>
+      </section>
+
+      <!-- §4 -->
+      <section id="s4">
+        <h2><span class="n">4</span>개인정보의 제3자 제공</h2>
+        <p>회사는 이용자의 개인정보를 원칙적으로 제3자에게 제공하지 않습니다. 단, 다음의 경우는 예외입니다.</p>
+        <ul>
+          <li>이용자가 초대 코드로 명시적으로 연결 허용한 보호자에게 위치·상태 정보 제공</li>
+          <li>법령의 규정 또는 수사기관의 적법한 요청에 의한 경우</li>
+          <li>이용자의 생명이나 안전에 급박한 위험이 있어 이를 해소하기 위한 경우</li>
+        </ul>
+      </section>
+
+      <!-- §5 -->
+      <section id="s5">
+        <h2><span class="n">5</span>개인정보 처리 위탁</h2>
+        <div class="table-wrap">
+          <table>
+            <thead><tr><th>수탁업체</th><th>위탁 업무</th><th>보유기간</th></tr></thead>
+            <tbody>
+              <tr><td>Google Firebase<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google LLC</span></td><td>인증(Google Sign-In), FCM 푸시 알림</td><td>위탁 계약 종료 시까지</td></tr>
+              <tr><td>Amazon Web Services<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">AWS</span></td><td>위치 이력 저장, REST API, 음성 파일 저장 및 CDN</td><td>위탁 계약 종료 시까지</td></tr>
+              <tr><td>Firebase Crashlytics<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google LLC</span></td><td>앱 오류·충돌 로그 수집 및 분석</td><td>위탁 계약 종료 시까지</td></tr>
+              <tr><td>Apple Inc.<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">App Store</span></td><td>iOS 인앱 구독 결제 처리 및 구독 상태 관리</td><td>위탁 계약 종료 시까지</td></tr>
+              <tr><td>Google LLC<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google Play</span></td><td>Android 인앱 구독 결제 처리 및 구독 상태 관리</td><td>위탁 계약 종료 시까지</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
+      <!-- §6 -->
+      <section id="s6">
+        <h2><span class="n">6</span>개인정보의 파기</h2>
+        <p>회사는 개인정보 보유기간이 경과하거나 처리 목적이 달성된 경우 지체 없이 파기합니다.</p>
+        <ul>
+          <li><strong>전자적 파일</strong> — 복원 불가능한 방법으로 영구 삭제</li>
+          <li><strong>자동 만료</strong> — 설정된 보유기간 경과 시 시스템에 의해 자동 삭제</li>
+          <li><strong>즉시 삭제</strong> — 회원 탈퇴 요청 시 보유기간에 관계없이 즉시 삭제 처리 (법령상 보관 의무 자료 제외)</li>
+        </ul>
+      </section>
+
+      <!-- §7 -->
+      <section id="s7">
+        <h2><span class="n">7</span>이용자의 권리 및 행사 방법</h2>
+        <p>이용자는 언제든지 다음 권리를 행사할 수 있습니다.</p>
+        <ul>
+          <li><strong>열람</strong> — 앱 내 이력 화면에서 수집된 위치 정보 확인</li>
+          <li><strong>삭제</strong> — 앱 설정 → "위치 기록 삭제" 기능 이용</li>
+          <li><strong>회원 탈퇴</strong> — 앱 설정 → "계정 삭제"로 모든 데이터 즉시 삭제</li>
+          <li><strong>수집 중단</strong> — 앱에서 추적 중지 또는 위치 권한 거부</li>
+          <li><strong>이메일 요청</strong> — <a href="mailto:support@iveandor.com" style="color:var(--coral-dark);font-weight:600;border-bottom:1px solid currentColor;">support@iveandor.com</a>으로 서면 요청 (7영업일 이내 처리)</li>
+        </ul>
+        <p style="margin-top:14px;">만 14세 미만 이용자의 경우 법정대리인 또는 위임을 받은 대리인이 위 권리를 행사할 수 있으며, 법정대리인은 이용자의 모든 권리를 가집니다.</p>
+      </section>
+
+      <!-- §8 -->
+      <section id="s8">
+        <h2><span class="n">8</span>보호의무자의 권리</h2>
+        <p>
+          8세 이하 아동, 피성년후견인, 「장애인복지법」 제2조 제2항 제2호에 따른 중증장애인의 보호의무자는
+          그 대상자의 생명 또는 신체 보호를 위하여 개인위치정보의 이용 또는 제공에 동의할 수 있으며,
+          이 경우 본인의 동의가 있는 것으로 봅니다.
+          보호의무자는 해당 이용자의 모든 권리를 가집니다.
+        </p>
+      </section>
+
+      <!-- §9 -->
+      <section id="s9">
+        <h2><span class="n">9</span>위치정보 이용·제공사실 확인자료의 보유</h2>
+        <p>
+          회사는 「위치정보의 보호 및 이용 등에 관한 법률」 제16조 제2항에 따라
+          개인위치정보 이용·제공사실 확인자료를 자동으로 기록·보존하며,
+          해당 자료는 <strong style="color:var(--ink);">6개월간</strong> 보관합니다.
+        </p>
+      </section>
+
+      <!-- §10 -->
+      <section id="s10">
+        <h2><span class="n">10</span>개인정보 보호책임자 및 위치정보관리책임자</h2>
+        <div class="sub-block">
+          <div class="sub-block__title"><span class="marker">①</span>개인정보 보호책임자</div>
+          <ul>
+            <li><strong>성명</strong> — 강일구</li>
+            <li><strong>이메일</strong> — <a href="mailto:support@iveandor.com" style="color:var(--coral-dark);font-weight:600;border-bottom:1px solid currentColor;">support@iveandor.com</a></li>
+          </ul>
+        </div>
+        <div class="sub-block">
+          <div class="sub-block__title"><span class="marker">②</span>위치정보관리책임자</div>
+          <ul>
+            <li><strong>성명</strong> — 강일구</li>
+            <li><strong>이메일</strong> — <a href="mailto:support@iveandor.com" style="color:var(--coral-dark);font-weight:600;border-bottom:1px solid currentColor;">support@iveandor.com</a></li>
+          </ul>
+        </div>
+        <p style="margin-top:18px;">개인정보 침해 관련 신고·상담은 개인정보침해 신고센터(<a href="https://privacy.kisa.or.kr" target="_blank" rel="noopener" style="color:var(--coral-dark);font-weight:600;border-bottom:1px solid currentColor;">privacy.kisa.or.kr</a>)를 통해 문의하실 수 있습니다.</p>
+      </section>
+
+      <!-- §11 -->
+      <section id="s11">
+        <h2><span class="n">11</span>개인정보 처리방침 변경</h2>
+        <p>본 방침은 법령·서비스 변경에 따라 개정될 수 있으며, 변경 시 시행 7일 전 앱 내 공지합니다.</p>
+      </section>
+
+      <!-- Contact CTA -->
+      <div class="contact-card">
+        <div>
+          <h3>문의 사항이 있으신가요?</h3>
+          <p>개인정보 처리와 관련된 모든 문의에 7영업일 이내 답변드립니다.</p>
+        </div>
+        <a href="mailto:support@iveandor.com">
+          support@iveandor.com
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></svg>
+        </a>
+      </div>
+
+    </main>
+  </div>
+</div>
+
+<!-- ============ FOOTER ============ -->
+<footer>
+  <div class="container">
+    <div class="foot">
+      <div class="foot__brand">
+        <a class="brand" href="index.html">
+          <span class="brand__mark" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
+          </span>
+          iLogTracker
+        </a>
+        <span class="tagline">가족의 안전을 연결합니다</span>
+      </div>
+      <div class="foot__links">
+        <a href="privacy_policy.html" class="is-current">개인정보처리방침</a>
+        <a href="terms_of_use.html">이용약관</a>
+        <a href="user_guide.html">사용자 가이드</a>
+        <a href="permissions_guide.html">기기 권한 설정 가이드</a>
+      </div>
+    </div>
+    <div class="foot__copy">
+      <span>© 2026 iLogTracker. All rights reserved.</span>
+      <span>Made for families.</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Sticky nav border on scroll
+  const nav = document.getElementById('nav');
+  const onScroll = () => nav.classList.toggle('is-scrolled', window.scrollY > 8);
+  document.addEventListener('scroll', onScroll, { passive: true });
+  onScroll();
+
+  // Active TOC item based on scroll
+  const sections = Array.from(document.querySelectorAll('.content section[id]'));
+  const tocLinks = new Map();
+  document.querySelectorAll('.toc__list a').forEach(a => {
+    const id = a.getAttribute('href').slice(1);
+    tocLinks.set(id, a);
+  });
+
+  const setActive = (id) => {
+    tocLinks.forEach(a => a.classList.remove('is-active'));
+    const a = tocLinks.get(id);
+    if (a) a.classList.add('is-active');
+  };
+
+  const obs = new IntersectionObserver((entries) => {
+    // Pick the entry closest to the top edge
+    const visible = entries
+      .filter(e => e.isIntersecting)
+      .sort((a, b) => a.boundingClientRect.top - b.boundingClientRect.top);
+    if (visible[0]) setActive(visible[0].target.id);
+  }, { rootMargin: '-100px 0px -60% 0px', threshold: 0 });
+  sections.forEach(s => obs.observe(s));
+</script>
+</body>
+</html>
