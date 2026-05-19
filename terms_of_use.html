@@ -496,9 +496,40 @@
   }
   .foot__links a:hover { color: var(--coral-dark); }
   .foot__links a.is-current { color: var(--coral-dark); font-weight: 600; }
-  .foot__copy {
+  .foot__biz {
     margin-top: 32px;
-    padding-top: 20px;
+    padding-top: 24px;
+    border-top: 1px solid var(--line);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 14px 32px;
+    font-size: 13px;
+    color: var(--ink-muted);
+    line-height: 1.55;
+  }
+  @media (max-width: 768px) {
+    .foot__biz { grid-template-columns: 1fr 1fr; gap: 12px 20px; }
+  }
+  @media (max-width: 480px) {
+    .foot__biz { grid-template-columns: 1fr; gap: 10px; }
+  }
+  .foot__biz dt {
+    font-size: 11px;
+    font-weight: 600;
+    color: var(--ink-faint);
+    letter-spacing: .02em;
+    text-transform: uppercase;
+    margin-bottom: 2px;
+  }
+  .foot__biz dd {
+    margin: 0;
+    color: var(--ink-2);
+    font-size: 13px;
+    font-weight: 500;
+  }
+  .foot__copy {
+    margin-top: 40px;
+    padding-top: 24px;
     border-top: 1px solid var(--line);
     font-size: 13px; color: var(--ink-faint);
     display: flex; justify-content: space-between; flex-wrap: wrap; gap: 8px;
@@ -890,6 +921,32 @@
         <a href="permissions_guide.html">기기 권한 설정 가이드</a>
       </div>
     </div>
+    <dl class="foot__biz">
+      <div>
+        <dt>사업자등록번호</dt>
+        <dd>397-11-03213</dd>
+      </div>
+      <div>
+        <dt>위치기반서비스사업신고필증</dt>
+        <dd>제1092호</dd>
+      </div>
+      <div>
+        <dt>통신판매업신고번호</dt>
+        <dd>제 2026-3130278-30-2-01231 호</dd>
+      </div>
+      <div>
+        <dt>주소</dt>
+        <dd>서울특별시 마포구 와우산로 105, 5층 221A호 (서교동)</dd>
+      </div>
+      <div>
+        <dt>연락처</dt>
+        <dd><a href="mailto:support@iveandor.com" style="color:inherit;border-bottom:1px solid var(--line-strong);">support@iveandor.com</a></dd>
+      </div>
+      <div>
+        <dt>대표이사</dt>
+        <dd>강일구</dd>
+      </div>
+    </dl>
     <div class="foot__copy">
       <span>© 2026 iTrace &amp; iLog &amp; iLogMobile. All rights reserved.</span>
       <span>Made for families.</span>
