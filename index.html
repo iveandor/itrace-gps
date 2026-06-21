@@ -1578,6 +1578,84 @@
     transition: background-color .15s;
   }
   .tw-reset:hover { background: var(--coral-tint); color: var(--coral-dark); }
+  /* ---------- Launch coming-soon modal ---------- */
+  .launch-modal {
+    position: fixed; inset: 0; z-index: 1000;
+    display: none; align-items: center; justify-content: center;
+    padding: 24px;
+    background: rgba(26,26,26,.55);
+    backdrop-filter: blur(4px); -webkit-backdrop-filter: blur(4px);
+    opacity: 0; transition: opacity .28s var(--ease);
+  }
+  .launch-modal.is-open { display: flex; opacity: 1; }
+  .launch-modal__card {
+    position: relative; width: 100%; max-width: 440px;
+    background: var(--surface); border-radius: var(--r-hero);
+    padding: 38px 32px 28px;
+    box-shadow: var(--shadow-3); text-align: center;
+    transform: translateY(14px) scale(.97);
+    transition: transform .32s var(--ease);
+  }
+  .launch-modal.is-open .launch-modal__card { transform: translateY(0) scale(1); }
+  .launch-modal__close {
+    position: absolute; top: 14px; right: 14px;
+    width: 34px; height: 34px; border-radius: 50%;
+    display: grid; place-items: center;
+    color: var(--ink-muted); background: var(--cream);
+    transition: background-color .2s, color .2s;
+  }
+  .launch-modal__close:hover { background: var(--cream-deep); color: var(--ink); }
+  .launch-modal__close svg { width: 16px; height: 16px; }
+  .launch-modal__badge {
+    display: inline-flex; align-items: center; gap: 7px;
+    height: 30px; padding: 0 14px; margin-bottom: 18px;
+    border-radius: var(--r-pill);
+    background: var(--coral-tint); color: var(--coral-dark);
+    font-size: 12px; font-weight: 700; letter-spacing: .06em;
+  }
+  .launch-modal__badge .dot {
+    width: 7px; height: 7px; border-radius: 50%; background: var(--coral);
+    animation: lm-pulse 1.8s infinite;
+  }
+  @keyframes lm-pulse {
+    0% { box-shadow: 0 0 0 0 rgba(255,122,69,.5); }
+    70% { box-shadow: 0 0 0 8px rgba(255,122,69,0); }
+    100% { box-shadow: 0 0 0 0 rgba(255,122,69,0); }
+  }
+  .launch-modal__icon {
+    width: 64px; height: 64px; margin: 0 auto 18px;
+    border-radius: 20px; display: grid; place-items: center;
+    background: linear-gradient(135deg, var(--coral), var(--coral-dark));
+    box-shadow: 0 10px 24px rgba(255,122,69,.32);
+  }
+  .launch-modal__icon svg { width: 32px; height: 32px; color: #fff; }
+  .launch-modal__title { margin: 0 0 10px; font-size: 22px; font-weight: 800; letter-spacing: -.02em; color: var(--ink); }
+  .launch-modal__desc { margin: 0 0 20px; font-size: 14.5px; line-height: 1.66; color: var(--ink-muted); }
+  .launch-modal__apps { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin: 0 0 24px; }
+  .launch-modal__app {
+    font-size: 12.5px; font-weight: 600; color: var(--ink-2);
+    background: var(--cream); border: 1px solid var(--line);
+    padding: 7px 12px; border-radius: var(--r-pill);
+  }
+  .launch-modal__app small { color: var(--ink-faint); font-weight: 500; }
+  .launch-modal__btn {
+    display: inline-flex; align-items: center; justify-content: center;
+    width: 100%; height: 50px; border-radius: var(--r-pill);
+    background: var(--coral); color: #fff; font-weight: 700; font-size: 15px;
+    box-shadow: var(--shadow-cta);
+    transition: background-color .2s var(--ease), transform .2s var(--ease);
+  }
+  .launch-modal__btn:hover { background: var(--coral-dark); transform: translateY(-1px); }
+  .launch-modal__dismiss {
+    margin-top: 14px;
+    display: inline-flex; align-items: center; gap: 7px;
+    font-size: 13px; color: var(--ink-muted); cursor: pointer; user-select: none;
+  }
+  .launch-modal__dismiss input { width: 15px; height: 15px; accent-color: var(--coral); cursor: pointer; }
+  @media (max-width: 480px) {
+    .launch-modal__card { padding: 32px 22px 24px; }
+    .launch-modal__title { font-size: 20px; }
+  }
 </style>
 </head>
 <body>
@@ -2259,6 +2337,80 @@
     </div>
   </div>
 </footer>
+
+<!-- ========== LAUNCH COMING-SOON MODAL ========== -->
+<div class="launch-modal" id="launchModal" role="dialog" aria-modal="true" aria-labelledby="launchModalTitle" aria-describedby="launchModalDesc">
+  <div class="launch-modal__card">
+    <button class="launch-modal__close" id="launchModalClose" type="button" aria-label="닫기">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
+    </button>
+    <span class="launch-modal__badge"><span class="dot"></span>COMING SOON</span>
+    <div class="launch-modal__icon" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.5-2 5-2 5s3.5-.5 5-2a3.5 3.5 0 0 0-3-3z"/><path d="M12 15l-3-3a12 12 0 0 1 9-9 12 12 0 0 1-9 9z"/><path d="M9 12H4s.5-2.8 2-4a5 5 0 0 1 3 0"/><path d="M12 15v5s2.8-.5 4-2a5 5 0 0 0 0-3"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/></svg>
+    </div>
+    <h2 class="launch-modal__title" id="launchModalTitle">출시 준비중입니다</h2>
+    <p class="launch-modal__desc" id="launchModalDesc">
+      가족 안심 위치 서비스가 곧 찾아갑니다. 현재 정식 출시를 준비하고 있어 앱 다운로드는 아직 제공되지 않습니다. 출시 소식을 조금만 기다려 주세요!
+    </p>
+    <div class="launch-modal__apps">
+      <span class="launch-modal__app">iLog <small>갤럭시 워치</small></span>
+      <span class="launch-modal__app">iLogMobile <small>스마트폰</small></span>
+      <span class="launch-modal__app">iTrace <small>보호자용</small></span>
+    </div>
+    <button class="launch-modal__btn" id="launchModalOk" type="button">알겠어요</button>
+    <label class="launch-modal__dismiss"><input type="checkbox" id="launchModalDismiss"> 오늘 하루 보지 않기</label>
+  </div>
+</div>
+
+<script>
+  (function () {
+    var modal = document.getElementById('launchModal');
+    if (!modal) return;
+    var KEY = 'itrace_launch_notice_hidden_until';
+    var dismissCb = document.getElementById('launchModalDismiss');
+    var lastFocus = null;
+
+    function todayStr() {
+      var d = new Date();
+      return d.getFullYear() + '-' + (d.getMonth() + 1) + '-' + d.getDate();
+    }
+    function shouldAutoShow() {
+      try { return localStorage.getItem(KEY) !== todayStr(); } catch (e) { return true; }
+    }
+    function openModal() {
+      lastFocus = document.activeElement;
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+      var ok = document.getElementById('launchModalOk');
+      if (ok) ok.focus();
+    }
+    function closeModal() {
+      if (dismissCb && dismissCb.checked) {
+        try { localStorage.setItem(KEY, todayStr()); } catch (e) {}
+      }
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+
+    document.getElementById('launchModalClose').addEventListener('click', closeModal);
+    document.getElementById('launchModalOk').addEventListener('click', closeModal);
+    modal.addEventListener('click', function (e) { if (e.target === modal) closeModal(); });
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
+    });
+
+    // 아직 비활성인 다운로드(스토어) 버튼 — 클릭 시 출시 안내 모달 표시
+    document.querySelectorAll('.store-btn').forEach(function (btn) {
+      btn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
+    });
+
+    // 페이지 진입 시 자동 표시 ('오늘 하루 보지 않기' 미설정인 경우)
+    if (shouldAutoShow()) {
+      window.setTimeout(openModal, 700);
+    }
+  })();
+</script>
 
 <!-- ============================================================
      TWEAKS PANEL
