@@ -1,6 +1,11 @@
 {
   "name": "iTrace & iLog & iLogMobile",
   "short_name": "iTrace",
+  "description": "갤럭시 워치와 스마트폰으로 가족·자녀의 실시간 위치를 공유하고 안심존·SOS 긴급 상황을 즉시 알리는 가족 위치 추적 서비스.",
+  "id": "/",
+  "start_url": "/",
+  "scope": "/",
+  "lang": "ko",
   "icons": [
     {
       "src": "favicon-192.png",

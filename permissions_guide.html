@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#FF7A45" />
 <title>기기 권한 설정 가이드 — iTrace &amp; iLog &amp; iLogMobile</title>
 <!-- SEO -->
-<meta name="description" content="iLogMobile(Android·iOS)·iLog(Wear OS)·iTrace(Android·iOS) 앱의 필수 권한 설정 방법을 플랫폼별로 안내합니다." />
-<meta name="keywords" content="iLogMobile 권한 설정, iTrace 권한, 위치 권한 허용, 배터리 최적화 제외, Wear OS 권한, Android iOS 권한" />
+<meta name="description" content="iLogMobile(Android·iOS)·iLog(갤럭시 워치)·iTrace(Android·iOS) 앱의 필수 권한 설정 방법을 기기별로 안내합니다." />
+<meta name="keywords" content="iLogMobile 권한 설정, iTrace 권한, 위치 권한 허용, 배터리 최적화 제외, 갤럭시 워치 권한, Android iOS 권한" />
 <meta name="author" content="iveandor" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://itrace.iveandor.com/permissions_guide.html" />
@@ -45,7 +45,7 @@
       "@id": "https://itrace.iveandor.com/permissions_guide.html",
       "url": "https://itrace.iveandor.com/permissions_guide.html",
       "name": "기기 권한 설정 가이드",
-      "description": "iLogMobile·iLog·iTrace 앱의 필수 권한 설정 방법 (Android·iOS·Wear OS)",
+      "description": "iLogMobile·iLog·iTrace 앱의 필수 권한 설정 방법 (Android·iOS·갤럭시 워치)",
       "inLanguage": "ko-KR",
       "isPartOf": { "@id": "https://itrace.iveandor.com/#website" },
       "publisher": {
@@ -674,7 +674,7 @@
     </span>
     <h1>기기 권한 설정 가이드</h1>
     <p class="ph__intro">
-      iLog · iLogMobile · iTrace가 정상적으로 동작하려면 기기의 위치·배터리·알림 권한이 올바르게 설정되어야 합니다.
+      iLog(갤럭시 워치) · iLogMobile(스마트폰) · iTrace(보호자용)가 정상적으로 동작하려면 기기의 위치·배터리·알림 권한이 올바르게 설정되어야 합니다.
       특히 <strong>백그라운드 위치 추적</strong>은 설정이 잘못되면 앱 화면이 꺼진 상태에서 수집이 중단될 수 있습니다.
     </p>
     <div class="ph__meta">
@@ -704,7 +704,7 @@
         </a></li>
         <li><a href="#ilog-wear">
           <span class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6V3h6v3M9 18v3h6v-3"/></svg></span>
-          iLog · Wear OS
+          iLog · 갤럭시 워치
         </a></li>
       </ol>
 
@@ -918,11 +918,11 @@
           <span class="app-name">iLog</span>
           <span class="badge badge--wear">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6V3h6v3M9 18v3h6v-3"/></svg>
-            Wear OS
+            갤럭시 워치
           </span>
         </h2>
         <p class="sec-intro">
-          iLog는 Galaxy Watch(Wear OS)에서 단독 실행형(standalone) 앱으로 동작하며, 권한은 페어링된 스마트폰이 아니라 워치에서 직접 설정합니다.
+          iLog는 갤럭시 워치에서 단독으로 동작하는 앱이며, 권한은 연결된 스마트폰이 아니라 워치에서 직접 설정합니다.
         </p>
 
         <h3>위치 권한 — 항상 허용</h3>
@@ -937,7 +937,7 @@
           <li><div>워치에서 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog</span> <span class="arrow">›</span> <span class="path">권한</span> <span class="arrow">›</span> <span class="path">마이크</span> <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
-        <h3>배터리 최적화 (Wear OS)</h3>
+        <h3>배터리 최적화 (갤럭시 워치)</h3>
         <p>Galaxy Watch에서는 앱별 배터리 최적화 해제를 직접 설정할 수 없습니다(시스템 제약). 대신 워치의 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">배터리</span> 에서 절전 모드를 끄고 워치를 충분히 충전된 상태로 유지하면 백그라운드 위치 추적이 안정적으로 동작합니다.</p>
 
         <div class="info info--tip">
@@ -1043,7 +1043,7 @@
               </tr>
               <tr>
                 <td><strong>iLog</strong></td>
-                <td><span class="badge badge--wear">Wear OS</span></td>
+                <td><span class="badge badge--wear">갤럭시 워치</span></td>
                 <td class="req">항상 허용</td>
                 <td class="na">직접 설정 불가</td>
                 <td class="opt">허용</td>

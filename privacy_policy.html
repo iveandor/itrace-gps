@@ -514,7 +514,7 @@
     </span>
     <h1>개인정보 처리방침</h1>
     <p class="ph__intro">
-      강일구(이하 "회사")는 iLog · iTrace · iLogMobile 서비스(이하 "서비스") 이용자의 개인정보를 소중히 여기며,
+      강일구(이하 "회사")는 iLog(갤럭시 워치) · iTrace(보호자용) · iLogMobile(스마트폰) 서비스(이하 "서비스") 이용자의 개인정보를 소중히 여기며,
       「개인정보 보호법」 및 「위치정보의 보호 및 이용 등에 관한 법률」을 준수합니다.
     </p>
     <div class="ph__meta">
@@ -566,7 +566,7 @@
               </tr>
               <tr>
                 <td>기기 식별 정보</td>
-                <td>기기 고유 식별자(UID), FCM 푸시 토큰</td>
+                <td>기기 고유 식별자, 푸시 알림용 기기 식별값</td>
                 <td>앱 최초 실행 시 자동 생성</td>
               </tr>
               <tr>
@@ -601,7 +601,7 @@
               </tr>
               <tr>
                 <td>오류·충돌 정보</td>
-                <td>앱 충돌 시 스택 트레이스, 기기 모델, OS 버전</td>
+                <td>앱 충돌 시 오류 기록, 기기 모델, OS 버전</td>
                 <td>Firebase Crashlytics 자동 수집 (앱 비정상 종료 시)</td>
               </tr>
             </tbody>
@@ -610,9 +610,9 @@
         <div class="note">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
           <div>
-            <p>Android Watch(iLog)는 별도 회원가입 없이 Galaxy Watch에 연결된 Google 계정으로 자동 인증됩니다.</p>
+            <p>iLog(갤럭시 워치)는 별도 회원가입 없이 워치에 연결된 Google 계정으로 자동 인증됩니다.</p>
             <p>iLog(Galaxy Watch)는 SOS 발생 시 주변 음성만 녹음하며, iLogMobile은 Android 자녀폰에서 주변 영상을, iPhone에서 주변 음성을 녹화합니다.</p>
-            <p>원격 모니터링(스트리밍)은 iLogMobile(스마트폰) 전용 기능이며, Android Watch(iLog)는 지원하지 않습니다.</p>
+            <p>원격 모니터링(스트리밍)은 iLogMobile(스마트폰) 전용 기능이며, iLog(갤럭시 워치)는 지원하지 않습니다.</p>
           </div>
         </div>
       </section>
@@ -623,7 +623,7 @@
         <ul>
           <li>실시간 위치 공유 및 지도 서비스 제공</li>
           <li>이동 경로 이력 저장 및 조회 기능 제공</li>
-          <li>안심존(지오펜스) 진입·이탈 알림 서비스</li>
+          <li>안심존 진입·이탈 알림 서비스</li>
           <li>SOS 긴급 알림 발송 및 보호자 통보</li>
           <li>원격 음성 모니터링 기능 제공 (iLogMobile 기기에 한함)</li>
           <li>위치 수집 주기 원격 동기화</li>
@@ -644,7 +644,7 @@
               <tr><td>위치 이력 데이터</td><td>수집 시점으로부터 최대 30일 후 자동 삭제</td></tr>
               <tr><td>실시간 위치 (최신값)</td><td>서비스 이용 중 유지, 탈퇴 또는 연결 해제 시 삭제</td></tr>
               <tr><td>위치정보 이용·제공사실 확인자료</td><td>6개월 (위치정보법 제16조 제2항)</td></tr>
-              <tr><td>FCM 푸시 토큰</td><td>회원 탈퇴 시까지</td></tr>
+              <tr><td>푸시 알림용 기기 식별값</td><td>회원 탈퇴 시까지</td></tr>
               <tr><td>SOS 음성·영상 녹음 파일</td><td>수집 후 30일 후 자동 삭제. 이용자 직접 삭제 또는 회원 탈퇴 시 즉시 삭제</td></tr>
               <tr><td>SOS 세션 기록</td><td>수집 후 30일 후 자동 삭제</td></tr>
               <tr><td>원격 모니터링 파일 (음성)</td><td>수집 후 30일 후 자동 삭제. 이용자 직접 삭제 또는 회원 탈퇴 시 즉시 삭제</td></tr>
@@ -675,8 +675,8 @@
           <table>
             <thead><tr><th>수탁업체</th><th>위탁 업무</th><th>보유기간</th></tr></thead>
             <tbody>
-              <tr><td>Google Firebase<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google LLC</span></td><td>인증(Google Sign-In), FCM 푸시 알림</td><td>위탁 계약 종료 시까지</td></tr>
-              <tr><td>Amazon Web Services<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">AWS</span></td><td>위치 이력 저장, REST API, 음성 파일 저장 및 CDN</td><td>위탁 계약 종료 시까지</td></tr>
+              <tr><td>Google Firebase<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google LLC</span></td><td>로그인 인증(Google 계정), 푸시 알림 발송</td><td>위탁 계약 종료 시까지</td></tr>
+              <tr><td>Amazon Web Services<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">AWS</span></td><td>위치 이력 저장, 서버 처리, 음성·영상 파일 저장 및 전송</td><td>위탁 계약 종료 시까지</td></tr>
               <tr><td>Firebase Crashlytics<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google LLC</span></td><td>앱 오류·충돌 로그 수집 및 분석</td><td>위탁 계약 종료 시까지</td></tr>
               <tr><td>Apple Inc.<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">App Store</span></td><td>iOS 인앱 구독 결제 처리 및 구독 상태 관리</td><td>위탁 계약 종료 시까지</td></tr>
               <tr><td>Google LLC<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google Play</span></td><td>Android 인앱 구독 결제 처리 및 구독 상태 관리</td><td>위탁 계약 종료 시까지</td></tr>

@@ -1,4 +1,15 @@
+# itrace.iveandor.com — robots.txt
+# 모든 검색 로봇에 전체 색인 허용
+
 User-agent: *
+Allow: /
+
+# 네이버 검색로봇 (서치어드바이저)
+User-agent: Yeti
+Allow: /
+
+# 다음/카카오 검색로봇
+User-agent: Daumoa
 Allow: /
 
 Sitemap: https://itrace.iveandor.com/sitemap.xml
