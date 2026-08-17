@@ -71,6 +71,7 @@
       "description": "보호자 모니터링 앱 — 카카오지도·구글지도 실시간 위치 확인, SOS 긴급 알림 수신, 안심존 진입·이탈 및 예상시각 미도착 알림, 원격 음성 모니터링, 방문장소 분석",
       "operatingSystem": "Android, iOS",
       "applicationCategory": "UtilitiesApplication",
+      "installUrl": "https://play.google.com/store/apps/details?id=com.iveandor.itrace",
       "offers": {
         "@type": "AggregateOffer",
         "priceCurrency": "KRW",
@@ -1661,6 +1662,12 @@
     transition: background-color .2s var(--ease), transform .2s var(--ease);
   }
   .launch-modal__btn:hover { background: var(--coral-dark); transform: translateY(-1px); }
+  .launch-modal__btn--ghost {
+    margin-top: 10px;
+    background: var(--cream); color: var(--ink-2);
+    border: 1px solid var(--line); box-shadow: none;
+  }
+  .launch-modal__btn--ghost:hover { background: var(--cream-deep); }
   .launch-modal__dismiss {
     margin-top: 14px;
     display: inline-flex; align-items: center; gap: 7px;
@@ -2253,7 +2260,7 @@
       <h2>지금 바로 시작하세요</h2>
       <p>Galaxy Watch 또는 스마트폰으로 가족의 안전을 지키세요.</p>
       <div class="cta__buttons">
-        <a href="#" class="store-btn">
+        <a href="https://play.google.com/store/apps/details?id=com.iveandor.itrace" target="_blank" rel="noopener" class="store-btn">
           <span class="store-btn__icon">
             <svg viewBox="0 0 24 24" fill="none">
               <path d="M5 3.5v17l13-8.5L5 3.5z" fill="#00C853"/>
@@ -2279,7 +2286,8 @@
           </span>
         </a>
       </div>
-      <p class="cta__note">iTrace (보호자용) · iLogMobile (자녀 스마트폰용) · iLog (자녀 갤럭시 워치용) 7일 무료 체험 · 이후 구독으로 계속 이용</p>
+      <p class="cta__note">iTrace (보호자용) · iLogMobile (자녀 스마트폰용) · iLog (자녀 갤럭시 워치용) 7일 무료 체험 · 이후 구독으로 계속 이용<br/>
+      보호자용 iTrace(Android)는 Google Play에서 다운로드할 수 있으며, 자녀용 앱과 App Store 버전은 출시 준비중입니다.</p>
     </div>
   </div>
 </section>
@@ -2347,20 +2355,21 @@
     <button class="launch-modal__close" id="launchModalClose" type="button" aria-label="닫기">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
     </button>
-    <span class="launch-modal__badge"><span class="dot"></span>COMING SOON</span>
+    <span class="launch-modal__badge"><span class="dot"></span>NOW ON GOOGLE PLAY</span>
     <div class="launch-modal__icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.5-2 5-2 5s3.5-.5 5-2a3.5 3.5 0 0 0-3-3z"/><path d="M12 15l-3-3a12 12 0 0 1 9-9 12 12 0 0 1-9 9z"/><path d="M9 12H4s.5-2.8 2-4a5 5 0 0 1 3 0"/><path d="M12 15v5s2.8-.5 4-2a5 5 0 0 0 0-3"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/></svg>
     </div>
-    <h2 class="launch-modal__title" id="launchModalTitle">출시 준비중입니다</h2>
+    <h2 class="launch-modal__title" id="launchModalTitle">보호자용 iTrace가 출시되었습니다</h2>
     <p class="launch-modal__desc" id="launchModalDesc">
-      가족 안심 위치 서비스가 곧 찾아갑니다. 현재 정식 출시를 준비하고 있어 앱 다운로드는 아직 제공되지 않습니다. 출시 소식을 조금만 기다려 주세요!
+      보호자용 iTrace(Android)를 지금 Google Play에서 다운로드할 수 있습니다. 자녀용 iLog(갤럭시 워치)·iLogMobile(스마트폰) 앱과 iPhone용 앱은 정식 출시를 준비하고 있어요. 조금만 기다려 주세요!
     </p>
     <div class="launch-modal__apps">
-      <span class="launch-modal__app">iLog <small>갤럭시 워치</small></span>
-      <span class="launch-modal__app">iLogMobile <small>스마트폰</small></span>
-      <span class="launch-modal__app">iTrace <small>보호자용</small></span>
+      <span class="launch-modal__app">iTrace <small>보호자용 · Google Play 출시</small></span>
+      <span class="launch-modal__app">iLog <small>갤럭시 워치 · 준비중</small></span>
+      <span class="launch-modal__app">iLogMobile <small>스마트폰 · 준비중</small></span>
     </div>
-    <button class="launch-modal__btn" id="launchModalOk" type="button">알겠어요</button>
+    <a class="launch-modal__btn" href="https://play.google.com/store/apps/details?id=com.iveandor.itrace" target="_blank" rel="noopener">Google Play에서 iTrace 받기</a>
+    <button class="launch-modal__btn launch-modal__btn--ghost" id="launchModalOk" type="button">알겠어요</button>
     <label class="launch-modal__dismiss"><input type="checkbox" id="launchModalDismiss"> 오늘 하루 보지 않기</label>
   </div>
 </div>
@@ -2403,8 +2412,8 @@
       if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
     });
 
-    // 아직 비활성인 다운로드(스토어) 버튼 — 클릭 시 출시 안내 모달 표시
-    document.querySelectorAll('.store-btn').forEach(function (btn) {
+    // 아직 미출시 스토어의 버튼(href="#")만 — 클릭 시 출시 안내 모달 표시
+    document.querySelectorAll('.store-btn[href="#"]').forEach(function (btn) {
       btn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
     });
 

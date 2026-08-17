@@ -21,5 +21,9 @@
 - 압축 시 1200×630 / 512×512 해상도 유지, 재배포 필요
 
 ### 4. 출시 시점 작업 (기존, `CLAUDE.md` Launch state 참조)
-- [ ] `.store-btn` placeholder `href="#"` → 실제 App Store / Google Play URL 교체
-- [ ] `#launchModal`(출시 준비중 팝업) 및 자동표시 제거
+- [x] ~~`.store-btn` placeholder `href="#"` → 실제 Google Play URL 교체~~ — **iTrace만 완료 (2026-08-17)**:
+      Google Play 버튼 → `https://play.google.com/store/apps/details?id=com.iveandor.itrace`
+      (JSON-LD `installUrl`·모달·user_guide §2에도 링크 반영)
+- [ ] App Store 출시 시: App Store 버튼 `href="#"` → 실제 URL 교체 (모달 자동 제외됨 — 스크립트가
+      `href="#"`인 버튼만 모달로 연결)
+- [ ] 전체 앱(iLog·iLogMobile·iOS) 출시 완료 시: `#launchModal` 및 자동표시 제거
