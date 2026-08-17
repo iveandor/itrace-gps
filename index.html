@@ -1065,11 +1065,21 @@
   /* ---------- Pricing ---------- */
   .pricing { background: var(--cream); }
   .plan-grid {
-    display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px;
+    display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px;
     align-items: stretch;
+    max-width: 980px; margin: 0 auto;
   }
-  @media (max-width: 960px) { .plan-grid { grid-template-columns: repeat(2, 1fr); } }
-  @media (max-width: 560px) { .plan-grid { grid-template-columns: 1fr; } }
+  @media (max-width: 960px) {
+    .plan-grid { grid-template-columns: repeat(2, 1fr); }
+    /* 카드가 홀수 장이면 마지막 카드를 두 열 폭 중앙에 배치 */
+    .plan-grid .plan-card:last-child:nth-child(odd) {
+      grid-column: 1 / -1; width: calc(50% - 8px); justify-self: center;
+    }
+  }
+  @media (max-width: 560px) {
+    .plan-grid { grid-template-columns: 1fr; }
+    .plan-grid .plan-card:last-child:nth-child(odd) { width: 100%; }
+  }
   .plan-card {
     background: var(--surface);
     border-radius: var(--r-hero);
