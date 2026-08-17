@@ -4,50 +4,56 @@
 
   <url>
     <loc>https://itrace.iveandor.com/</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itrace.iveandor.com/"/>
   </url>
 
   <url>
     <loc>https://itrace.iveandor.com/user_guide.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/user_guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itrace.iveandor.com/user_guide.html"/>
   </url>
 
   <url>
     <loc>https://itrace.iveandor.com/permissions_guide.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/permissions_guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itrace.iveandor.com/permissions_guide.html"/>
   </url>
 
   <url>
     <loc>https://itrace.iveandor.com/privacy_policy.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/privacy_policy.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itrace.iveandor.com/privacy_policy.html"/>
   </url>
 
   <url>
     <loc>https://itrace.iveandor.com/terms_of_use.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/terms_of_use.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itrace.iveandor.com/terms_of_use.html"/>
   </url>
 
   <url>
     <loc>https://itrace.iveandor.com/account_deletion.html</loc>
-    <lastmod>2026-07-02</lastmod>
+    <lastmod>2026-08-17</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.5</priority>
     <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/account_deletion.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itrace.iveandor.com/account_deletion.html"/>
   </url>
 
 </urlset>
