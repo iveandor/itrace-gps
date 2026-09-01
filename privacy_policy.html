@@ -519,8 +519,8 @@
       「개인정보 보호법」 및 「위치정보의 보호 및 이용 등에 관한 법률」을 준수합니다.
     </p>
     <div class="ph__meta">
-      <span class="item"><span class="dot"></span>최종 수정일 <strong>2026. 5. 6.</strong></span>
-      <span class="item"><span class="dot"></span>시행일 <strong>2026. 5. 6.</strong></span>
+      <span class="item"><span class="dot"></span>최종 수정일 <strong>2026. 9. 1.</strong></span>
+      <span class="item"><span class="dot"></span>시행일 <strong>2026. 9. 8.</strong></span>
       <span class="item"><span class="dot"></span>적용 서비스 <strong>iLog · iLogMobile · iTrace</strong></span>
     </div>
   </div>
@@ -598,7 +598,7 @@
               <tr>
                 <td>구독 및 결제 정보</td>
                 <td>구독 상태, 구독 플랜, 구독 만료일, 앱 스토어 구매 식별자</td>
-                <td>App Store / Google Play 결제 완료 시 자동 수집</td>
+                <td>App Store / Google Play 결제 완료 시 구독 관리 서비스(RevenueCat)를 통해 자동 수집</td>
               </tr>
               <tr>
                 <td>오류·충돌 정보</td>
@@ -612,7 +612,7 @@
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
           <div>
             <p>자녀 앱(iLog 갤럭시 워치 · iLogMobile 스마트폰)은 <strong>별도의 계정을 만들지 않으며 로그인도 하지 않습니다.</strong> 보호자가 발급한 초대 코드로 기기를 연동하면 서비스가 그 <strong>기기에만 유효한 식별값</strong>을 발급해 인증하며, 이 과정에서 자녀의 Google·Apple 계정 정보는 <strong>수집하지 않습니다.</strong> 위 "계정 정보"는 보호자(iTrace)에만 해당합니다.</p>
-            <p>iLog(Galaxy Watch)는 SOS 발생 시 주변 음성만 녹음하며, iLogMobile은 Android 자녀폰에서 주변 영상을, iPhone에서 주변 음성을 녹화합니다.</p>
+            <p>iLog(Galaxy Watch)는 SOS 발생 시 주변 음성만 녹음하며, iLogMobile은 Android 자녀폰에서 주변 영상과 음성을, iPhone에서 주변 음성을 녹화합니다.</p>
             <p>원격 모니터링(음성)은 iLog(갤럭시 워치)와 Android 자녀폰(iLogMobile)에서 지원하며, iPhone(iLogMobile)에서는 지원하지 않습니다.</p>
           </div>
         </div>
@@ -677,11 +677,12 @@
           <table>
             <thead><tr><th>수탁업체</th><th>위탁 업무</th><th>보유기간</th></tr></thead>
             <tbody>
-              <tr><td>Google Firebase<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google LLC</span></td><td>로그인 인증(Google 계정), 푸시 알림 발송</td><td>위탁 계약 종료 시까지</td></tr>
+              <tr><td>Google Firebase<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google LLC</span></td><td>로그인 인증(Google·Apple 계정), 푸시 알림 발송</td><td>위탁 계약 종료 시까지</td></tr>
               <tr><td>Amazon Web Services<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">AWS</span></td><td>위치 이력 저장, 서버 처리, 음성·영상 파일 저장 및 전송</td><td>위탁 계약 종료 시까지</td></tr>
               <tr><td>Firebase Crashlytics<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google LLC</span></td><td>앱 오류·충돌 로그 수집 및 분석</td><td>위탁 계약 종료 시까지</td></tr>
               <tr><td>Apple Inc.<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">App Store</span></td><td>iOS 인앱 구독 결제 처리 및 구독 상태 관리</td><td>위탁 계약 종료 시까지</td></tr>
               <tr><td>Google LLC<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">Google Play</span></td><td>Android 인앱 구독 결제 처리 및 구독 상태 관리</td><td>위탁 계약 종료 시까지</td></tr>
+              <tr><td>RevenueCat<br/><span style="font-weight:400;color:var(--ink-muted);font-size:12.5px;">RevenueCat, Inc.</span></td><td>인앱 구독 상태 확인·갱신 및 구독 이용 권한 관리</td><td>위탁 계약 종료 시까지</td></tr>
             </tbody>
           </table>
         </div>
@@ -708,7 +709,7 @@
             초대 코드로 기기를 연동하는 방식이므로, 개인위치정보주체의 권리 행사(열람·정정·삭제·동의 철회)는
             보호자(iTrace) 계정을 통해 하거나 아래 연락처(고객센터)로 직접 요청할 수 있습니다.
             자녀 기기의 <strong>연동 해제</strong>는 동의 철회에 해당하며 위치 전송이 즉시 중단됩니다.</li>
-          <li><strong>삭제</strong> — 앱 설정 → "위치 기록 삭제" 기능 이용</li>
+          <li><strong>삭제</strong> — iTrace "이력" 탭에서 날짜를 선택해 해당 날짜의 위치 기록 삭제(기기 소유자만 가능). SOS 세션·녹화와 원격 모니터링 기록은 각 목록에서 개별 삭제</li>
           <li><strong>회원 탈퇴</strong> — 앱 설정 → "계정 삭제"로 모든 데이터 즉시 삭제</li>
           <li><strong>수집 중단</strong> — 앱에서 추적 중지 또는 위치 권한 거부</li>
           <li><strong>이메일 요청</strong> — <a href="mailto:support@iveandor.com" style="color:var(--coral-dark);font-weight:600;border-bottom:1px solid currentColor;">support@iveandor.com</a>으로 서면 요청 (7영업일 이내 처리)</li>
