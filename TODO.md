@@ -11,9 +11,9 @@
 ### 2. 검색엔진 소유확인 (사용자 직접 작업)
 - [x] Google Search Console — **완료** (2026-09-06 확인: `itrace.iveandor.com` 도메인 속성 · 인증된 소유자 ·
       `iveandor.com` DNS TXT 로 상속 · 2026-07-07 등록). `google-site-verification` 메타는 도메인 속성에서
-      쓰이지 않으므로 `index.html` 에서 **삭제**(⏳ 미푸시 — 다시 넣지 말 것)
-- [ ] `naver-site-verification` 플레이스홀더를 네이버 서치어드바이저 발급 코드로 교체
-- [ ] 교체 후 재배포 → 네이버 소유확인 → `sitemap.xml` 제출(구글은 Sitemaps 메뉴에서 제출 여부만 확인) → 수집(색인) 요청
+      쓰이지 않으므로 `index.html` 에서 **삭제**(`85e7be3` 으로 푸시됨 — 다시 넣지 말 것)
+- [x] `naver-site-verification` 플레이스홀더를 네이버 서치어드바이저 발급 코드로 교체 — 2026-09-06 적용·푸시(`85e7be3`)
+- [ ] 서치어드바이저 **'소유확인' 클릭** → `sitemap.xml` 제출(구글은 Sitemaps 메뉴에서 제출 여부만 확인) → 수집(색인) 요청
 - 절차 상세: `../iLogTerraform/docs/marketing/itrace-gps-seo-setup.md`
   (2026-09-06 이관 — 구 경로 `docs/04-report/seo-setup-user-actions.md`. 이 repo `docs/` 는 gitignore 라 동기화가 안 됐다)
 - [ ] `index.html` `description` 135자 → 70자 · `og:description` 117자 → 60자 축약
