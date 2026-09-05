@@ -22,7 +22,7 @@
 
 ### 4. 출시 시점 작업 (기존, `CLAUDE.md` Launch state 참조)
 - [x] CTA를 **앱별 스토어 버튼 구조**로 개편 (2026-08-17): `.cta__stores` 아래 3그룹 —
-      iTrace(Play ✅ + App Store ✅), iLogMobile(Play ✅ · App Store 준비중), iLog(Play 준비중).
+      iTrace(Play ✅ + App Store ✅), iLogMobile(Play ✅ · App Store ✅), iLog(Play 준비중).
       **iTrace Google Play 링크 라이브**: `https://play.google.com/store/apps/details?id=com.iveandor.itrace`
       (JSON-LD `installUrl`·모달·user_guide §2에도 링크 반영)
 - [x] **iTrace App Store 라이브 (2026-09-05)**: `https://apps.apple.com/kr/app/itrace/id6761924543` —
@@ -30,6 +30,9 @@
 - [x] **iLogMobile Google Play 라이브 (사이트 반영 2026-09-05, 스토어 출시 08-31)**:
       `https://play.google.com/store/apps/details?id=com.iveandor.ilog.mobile` —
       CTA 버튼 `--soon` 해제 + JSON-LD `installUrl` + 모달 문구·인라인 링크 + user_guide §3 설치 링크 반영
+- [x] **iLogMobile App Store 라이브 (2026-09-05)**: `https://apps.apple.com/kr/app/ilogmobile/id6768343628` —
+      CTA 버튼 `--soon` 해제 + JSON-LD `installUrl` 배열화 + 모달 문구·인라인 링크 + user_guide §3 링크 반영.
+      남은 플레이스홀더 = iLog Google Play 1개.
 - [ ] 각 앱/스토어 출시 시: 해당 `.store-btn--soon` 버튼의 `href="#"` → 실제 URL 교체 +
       `store-btn--soon` 클래스·aria-label 제거 + `.top` 라벨을 "GET IT ON"/"Download on the"로 교체
       (모달 자동 제외됨 — 스크립트가 `href="#"`인 버튼만 모달로 연결)
