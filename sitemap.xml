@@ -21,6 +21,15 @@
   </url>
 
   <url>
+    <loc>https://itrace.iveandor.com/pairing_guide.html</loc>
+    <lastmod>2026-09-05</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <xhtml:link rel="alternate" hreflang="ko" href="https://itrace.iveandor.com/pairing_guide.html"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://itrace.iveandor.com/pairing_guide.html"/>
+  </url>
+
+  <url>
     <loc>https://itrace.iveandor.com/permissions_guide.html</loc>
     <lastmod>2026-09-01</lastmod>
     <changefreq>monthly</changefreq>
