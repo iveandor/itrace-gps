@@ -16,7 +16,9 @@
 - [x] 서치어드바이저 소유확인 **통과** + `sitemap.xml` 제출 (2026-09-06)
 - [x] 서치어드바이저 `요청 → 웹페이지 수집` 7개 URL 요청 완료 · `검증 → robots.txt` 정상 수집 확인(간단체크 "없음"=오탐 확정) ·
       Google Sitemaps 제출 성공(발견 7페이지) — 전부 2026-09-06
-- [ ] 다음(카카오) 검색 등록 신청(양식 샘플: SEO 문서 §6) · 며칠 뒤 네이버 `검증 → 사이트맵` 7개 인식 확인 · 간단체크 재조회(!3 → 1 이하 기대)
+- [x] 다음(카카오) 검색 등록 신청 완료 (2026-09-06 — 결과는 support@ 메일로)
+- [ ] 결과 확인(며칠~몇 주 뒤): 다음 처리 메일 · 네이버 `검증 → 사이트맵` 7개 인식 · 간단체크 재조회(경고 0건 기대) ·
+      구글 `색인 생성 > 페이지` 색인 수(기대 7) — 체크리스트 E(SEO 문서)
 - 절차 상세: `../iLogTerraform/docs/marketing/itrace-gps-seo-setup.md`
   (2026-09-06 이관 — 구 경로 `docs/04-report/seo-setup-user-actions.md`. 이 repo `docs/` 는 gitignore 라 동기화가 안 됐다)
 - [x] `index.html` `description` 135→70자 · `og:description` 117→60자 + 하위 4개 페이지 `description` 80자 이내 축약 (2026-09-06)
