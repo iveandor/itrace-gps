@@ -13,11 +13,13 @@
       `iveandor.com` DNS TXT 로 상속 · 2026-07-07 등록). `google-site-verification` 메타는 도메인 속성에서
       쓰이지 않으므로 `index.html` 에서 **삭제**(`85e7be3` 으로 푸시됨 — 다시 넣지 말 것)
 - [x] `naver-site-verification` 플레이스홀더를 네이버 서치어드바이저 발급 코드로 교체 — 2026-09-06 적용·푸시(`85e7be3`)
-- [ ] 서치어드바이저 **'소유확인' 클릭** → `sitemap.xml` 제출(구글은 Sitemaps 메뉴에서 제출 여부만 확인) → 수집(색인) 요청
+- [x] 서치어드바이저 소유확인 **통과** + `sitemap.xml` 제출 (2026-09-06)
+- [x] 서치어드바이저 `요청 → 웹페이지 수집` 7개 URL 요청 완료 · `검증 → robots.txt` 정상 수집 확인(간단체크 "없음"=오탐 확정) ·
+      Google Sitemaps 제출 성공(발견 7페이지) — 전부 2026-09-06
+- [ ] 다음(카카오) 검색 등록 신청(양식 샘플: SEO 문서 §6) · 며칠 뒤 네이버 `검증 → 사이트맵` 7개 인식 확인 · 간단체크 재조회(!3 → 1 이하 기대)
 - 절차 상세: `../iLogTerraform/docs/marketing/itrace-gps-seo-setup.md`
   (2026-09-06 이관 — 구 경로 `docs/04-report/seo-setup-user-actions.md`. 이 repo `docs/` 는 gitignore 라 동기화가 안 됐다)
-- [ ] `index.html` `description` 135자 → 70자 · `og:description` 117자 → 60자 축약
-      (네이버 권장 80자 초과 — 교체안은 위 문서 §1-B·§1-C). 하위 4개 페이지 `description` 도 80자 초과
+- [x] `index.html` `description` 135→70자 · `og:description` 117→60자 + 하위 4개 페이지 `description` 80자 이내 축약 (2026-09-06)
 
 ### 3. 이미지 용량 최적화 (선택)
 - [ ] `og-image.png` 262KB 압축 (카톡/슬랙 등 공유 미리보기 로딩 속도)
