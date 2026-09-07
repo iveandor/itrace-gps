@@ -336,9 +336,26 @@
     margin: 18px 0 4px;
     border-radius: 14px;
     border: 1px solid var(--line);
-    overflow: hidden;
-    background: #fff;
+    /* 좁은 화면에서 표가 잘리지 않고 표 안에서만 가로 스크롤되도록(hidden → auto).
+       page body 는 절대 가로 스크롤되지 않는다. */
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    /* 가로로 넘칠 때만 좌/우 끝에 그림자가 뜨는 스크롤 힌트.
+       local = 내용과 함께 스크롤(흰 덮개), scroll = 고정(그림자). 끝에 닿으면 덮개가
+       그림자를 가려 자동으로 사라진다. 표가 다 보이면 그림자도 보이지 않는다. */
+    background:
+      linear-gradient(to right, #fff 40%, rgba(255,255,255,0)) left center,
+      linear-gradient(to left,  #fff 40%, rgba(255,255,255,0)) right center,
+      radial-gradient(farthest-side at 0 50%,   rgba(31,26,23,.16), rgba(31,26,23,0)) left center,
+      radial-gradient(farthest-side at 100% 50%, rgba(31,26,23,.16), rgba(31,26,23,0)) right center;
+    background-color: #fff;
+    background-repeat: no-repeat;
+    background-size: 44px 100%, 44px 100%, 15px 100%, 15px 100%;
+    background-attachment: local, local, scroll, scroll;
   }
+  /* 열이 많아 좁은 화면에서 반드시 스크롤이 필요한 표 — 억지로 우겨넣지 않고
+     읽을 수 있는 최소 너비를 준다(위 스크롤 힌트가 안내). */
+  .table-wrap table.table--wide { min-width: 580px; }
   .content table {
     width: 100%;
     border-collapse: collapse;
@@ -353,6 +370,7 @@
     text-align: left;
     padding: 14px 16px;
     border-bottom: 1px solid var(--line);
+    word-break: keep-all;
   }
   .content tbody td {
     padding: 14px 16px;
@@ -360,17 +378,31 @@
     color: var(--ink-2);
     line-height: 1.6;
     vertical-align: top;
+    /* 한글은 기본값(break-all 유사)이면 어절 중간에서 잘려 "…시까/지" 처럼 끊긴다.
+       keep-all = 띄어쓰기 단위로만 줄바꿈. 한 어절이 칸보다 길 때만 break-word 가 받는다. */
+    word-break: keep-all;
+    overflow-wrap: break-word;
   }
   .content tbody tr:last-child td { border-bottom: none; }
   .content tbody tr:hover td { background: rgba(255,122,69,.03); }
   .content tbody td:first-child {
     font-weight: 600;
     color: var(--ink);
-    white-space: nowrap;
+    /* 구 white-space:nowrap 제거 — 긴 항목명("위치정보 수집·이용·제공사실 확인자료 …")이
+       한 줄로 강제돼 표가 818px 로 커졌고, 구 overflow:hidden 과 맞물려 글자가 잘려 있었다.
+       위 word-break:keep-all 이 이미 어절 단위로만 끊으므로 nowrap 은 불필요하다. */
   }
   @media (max-width: 600px) {
-    .content tbody td:first-child { white-space: normal; }
     .content thead th, .content tbody td { padding: 10px 12px; font-size: 13px; }
+  }
+
+  @media (max-width: 600px) {
+    /* 좁은 화면에서 표를 억지로 우겨넣으면 한 칸이 3~4줄로 쪼개져 읽기 어렵다.
+       읽을 수 있는 최소 너비를 주고, 넘치는 만큼만 표 안에서 가로 스크롤한다
+       (.table-wrap 의 좌/우 그림자가 스크롤 가능함을 알린다).
+       칸이 짧아 그대로도 잘 읽히는 표는 .table--compact 로 제외. */
+    .content .table-wrap table { min-width: 560px; }
+    .content .table-wrap table.table--compact { min-width: 0; }
   }
 
   /* Sub-list inside section (e.g. contact info) */
@@ -639,7 +671,7 @@
       <section id="s3">
         <h2><span class="n">3</span>개인정보 보유 및 이용기간</h2>
         <div class="table-wrap">
-          <table>
+          <table class="table--compact">
             <thead><tr><th>항목</th><th>보유기간</th></tr></thead>
             <tbody>
               <tr><td>계정 정보</td><td>회원 탈퇴 시까지</td></tr>
@@ -692,7 +724,7 @@
         <p>위 수탁업체 중 일부는 해외 사업자이며, 해당 업무 처리를 위해 개인정보가 국외로 이전됩니다.
           이용자는 국외 이전을 거부할 수 있으나, 거부 시 로그인·푸시 알림·인앱 구독 등 관련 기능을 이용할 수 없습니다.</p>
         <div class="table-wrap">
-          <table>
+          <table class="table--wide">
             <thead><tr><th>이전받는 자</th><th>이전 국가</th><th>이전 항목 · 목적</th><th>이전 시기 및 방법</th></tr></thead>
             <tbody>
               <tr><td>Google LLC</td><td>미국</td><td>계정 식별자·이메일(로그인 인증), 푸시 토큰(알림 발송), 오류 로그·기기 정보(Crashlytics)</td><td>해당 기능 이용 시 네트워크를 통해 암호화 전송</td></tr>
