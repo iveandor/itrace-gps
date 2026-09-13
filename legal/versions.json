@@ -1,0 +1,23 @@
+{
+  "schemaVersion": 1,
+  "documents": {
+    "terms": {
+      "url": "https://itrace.iveandor.com/terms_of_use.html",
+      "version": "2026-09-16",
+      "revisedAt": "2026-09-09",
+      "noticeFrom": "2026-09-09",
+      "requiresExplicitConsent": false,
+      "summary": "인앱 메시지 기능 반영(용어 정의·서비스 내용·이용자의 의무·이용 제한)",
+      "history": ["2026-09-08", "2026-05-06"]
+    },
+    "privacy": {
+      "url": "https://itrace.iveandor.com/privacy_policy.html",
+      "version": "2026-09-16",
+      "revisedAt": "2026-09-09",
+      "noticeFrom": "2026-09-09",
+      "requiresExplicitConsent": false,
+      "summary": "인앱 메시지 기능 반영",
+      "history": []
+    }
+  }
+}

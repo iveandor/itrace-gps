@@ -1,0 +1,35 @@
+# 법적 문서 버전 정합성 검사 — 약관/방침 HTML 이나 legal/versions.json 이 바뀌는 push·PR 마다
+# check_legal_versions.py 를 실행한다(헤더 시행일 · 약관 부칙 · 매니페스트가 같은 값인지).
+# GitHub Pages 는 정적 파일만 서빙하므로 이 스크립트는 여기서만 자동 실행된다. Pages 배포 자체는 건드리지 않는다.
+name: legal-check
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - terms_of_use.html
+      - privacy_policy.html
+      - legal/**
+      - check_legal_versions.py
+      - .github/workflows/legal-check.yml
+  pull_request:
+    paths:
+      - terms_of_use.html
+      - privacy_policy.html
+      - legal/**
+      - check_legal_versions.py
+      - .github/workflows/legal-check.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: 매니페스트 JSON 파싱
+        run: python3 -c 'import json; json.load(open("legal/versions.json", encoding="utf-8"))'
+      - name: 헤더·부칙·매니페스트 정합성
+        run: python3 check_legal_versions.py

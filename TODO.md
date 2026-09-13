@@ -54,5 +54,26 @@
 - [ ] 한동안 뒤(미업데이트 기기가 줄면): 안내 박스(`user_guide` §1 · `permissions_guide` 상단 · `index` `#apps` 한 줄)와
       카드·CTA의 "이전 이름 …" 표기 제거. **FAQ "iLogMobile · iLog 앱이 보이지 않아요"와 `pairing_guide` 의 "업데이트 전" 보조문구는 가장 늦게 제거**
 - [ ] 법적 문서(`privacy_policy`·`terms_of_use`·`account_deletion`)는 이번엔 "스토어·기기 표시명 「iTrace 자녀」" 한 줄만 넣었다 —
-      본문 앱명 전환은 다음 개정(시행일 변경) 때 법률 검토와 함께
+      본문 앱명 전환은 다음 개정(시행일 변경) 때 법률 검토와 함께. `legal/versions.json` 도 미변경(의도 — 시행일이 안 바뀌었으므로
+      버전도 그대로. 아래 §6 절차는 시행일이 바뀌는 개정에만 적용)
 - [ ] 브랜드 워드마크 `iTrace & iLog & iLogMobile`(title·nav·footer·©)와 JSON-LD `alternateName` 정리 여부 결정
+
+### 6. 법적 문서 개정 절차 (약관 버전관리, 2026-09-14 도입)
+앱(iTrace 가입·iLogMobile 연동)은 `legal/versions.json` 의 `version`(= **시행일**, `YYYY-MM-DD`)을 동의 버전으로 서버에
+기록하고, 기존 사용자에게는 저장된 버전과 매니페스트를 비교해 개정 안내(또는 재동의)를 띄운다. 따라서
+`terms_of_use.html`·`privacy_policy.html` 본문을 개정할 때는 **아래 항목을 한 커밋으로** 올려야 한다(GitHub Pages 는
+커밋 단위 배포라 원자적). 정본 절차: `../iLogTerraform/docs/guide/itrace-gps-site.md` "법적 문서 버전 매니페스트".
+- [ ] 두 HTML 헤더의 `최종 수정일`·`시행일` 갱신(시행일 = 고지일 + 7일 이상 — 약관 §3④·방침 §11. 이용자에게 불리한
+      변경이면 30일 유예 검토)
+- [ ] `terms_of_use.html` 부칙에 `제N조 (개정 약관의 시행일)` 추가(개정일·시행일·개정 요지)
+- [ ] `legal/versions.json` — 해당 문서의 `version`(새 시행일) · `revisedAt`(최종 수정일) · `noticeFrom`(공지 시작일 = 보통
+      최종 수정일) · `requiresExplicitConsent`(새 수집 항목 등 명시 재동의가 필요한 개정이면 `true`) · `summary`(앱 안내 문구) ·
+      `history`(직전 시행일을 맨 앞에 추가). 개정하지 않은 문서는 건드리지 않는다
+- [ ] `python3 check_legal_versions.py` exit 0 확인(헤더·부칙·매니페스트 정합 검사)
+      — 같은 검사가 GitHub Actions `legal-check`(`.github/workflows/legal-check.yml`)로 push/PR 마다 자동 실행된다(Pages 는
+      파이썬을 실행하지 않으므로 CI 가 유일한 자동 관문). 빨간 체크면 매니페스트나 헤더 중 하나가 덜 바뀐 것
+- [ ] `sitemap.xml` 의 해당 페이지 `lastmod` 갱신
+- [ ] 한 커밋으로 push → `curl -s https://itrace.iveandor.com/legal/versions.json` 로 반영 확인(GitHub Pages 캐시 최대 10분)
+- [ ] 앱에서 확인: iTrace 로그인 후 개정 안내 게이트가 `noticeFrom` 부터 뜨는지, 가입 화면 시행일 표기가 새 값인지
+- 앱 폴백 상수(`iTrace/src/shared/constants/legal.ts`·`iLogMobile/src/constants/legal.ts` 의 `LEGAL_FALLBACK_VERSIONS`)는
+  매니페스트 fetch 실패 시에만 쓰인다 — 다음 앱 릴리스 때 맞춰 올리면 되고, 사이트 개정을 막지 않는다

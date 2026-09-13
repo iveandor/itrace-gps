@@ -1,0 +1,11 @@
+# GitHub Pages(Jekyll) 빌드 설정 — 사이트에 올라가면 안 되는 내부 파일을 제외한다.
+# (exclude 가 없으면 Jekyll 이 TODO.md 를 /TODO.html 로 렌더해 공개했다 — 2026-09-14 확인.)
+# HTML 페이지는 front matter 가 없어 그대로 복사되므로 이 파일이 렌더링에 영향을 주지 않는다.
+exclude:
+  - check_legal_versions.py
+  - TODO.md
+  - CLAUDE.md
+  - README.md
+  - .github/
+  - .gitignore
+  - docs/
