@@ -84,7 +84,8 @@
     },
     {
       "@type": "MobileApplication",
-      "name": "iLog",
+      "name": "iTrace 자녀 - 갤럭시워치용",
+      "alternateName": "iLog",
       "description": "자녀 갤럭시 워치 위치 추적 앱 — 스마트폰 없이 워치 단독으로 실시간 GPS 위치 전송, 안심존 감지, SOS 긴급 발신 + 현장 음성 녹음",
       "operatingSystem": "Wear OS",
       "applicationCategory": "UtilitiesApplication",
@@ -97,7 +98,8 @@
     },
     {
       "@type": "MobileApplication",
-      "name": "iLogMobile",
+      "name": "iTrace 자녀 - 스마트폰용",
+      "alternateName": "iLogMobile",
       "description": "자녀 스마트폰 위치 추적 앱 — 백그라운드 GPS, 안심존 감지, SOS 긴급 발신 + 현장 영상·음성 녹화(Android·iPhone)",
       "operatingSystem": "Android, iOS",
       "applicationCategory": "UtilitiesApplication",
@@ -1196,6 +1198,7 @@
   .store-group { display: flex; flex-direction: column; align-items: center; gap: 10px; }
   .store-group__name { font-size: 15px; font-weight: 800; letter-spacing: -.01em; }
   .store-group__name small { font-size: 12px; font-weight: 500; opacity: .85; }
+  .apps__rename { margin: 12px auto 0; max-width: 640px; font-size: 13.5px; line-height: 1.6; color: var(--ink-muted); }
   .store-group__btns { display: flex; flex-direction: column; align-items: stretch; gap: 10px; }
   .store-group__btns .store-btn { min-width: 210px; }
   /* 미출시 스토어 — 흐린 상태, 클릭 시 출시 안내 모달(href="#" 대상 스크립트) */
@@ -1819,7 +1822,7 @@
                 </span>
               </div>
               <div class="scr-track">
-                <div class="scr-track__title">iLog Mobile</div>
+                <div class="scr-track__title">iTrace 자녀</div>
                 <div class="scr-track__pills">
                   <div class="mb-pill">야간 절약</div>
                   <div class="mb-pill mb-pill--linked">부모앱 연동됨</div>
@@ -1941,6 +1944,7 @@
       <span class="eyebrow">세 가지 앱</span>
       <h2 class="h-section">세 가지 앱, 하나의 안전망</h2>
       <p class="lead">자녀가 가진 기기에 맞춰 선택하세요. iTrace 보호자 앱이 모든 기기와 연결됩니다.</p>
+      <p class="apps__rename">자녀 앱 이름이 <strong>「iTrace 자녀」</strong>로 바뀌었습니다 — 이전 이름 iLog(갤럭시 워치) · iLogMobile(스마트폰). 업데이트 전인 기기나 스토어에서는 이전 이름으로 보일 수 있어요.</p>
     </div>
 
     <div class="app-grid">
@@ -1955,7 +1959,7 @@
           </svg>
         </div>
         <span class="app-card__tag">자녀 갤럭시 워치용</span>
-        <h3 class="app-card__title">iLog <span style="font-weight:500;color:var(--ink-muted);font-size:.66em;">갤럭시 워치</span></h3>
+        <h3 class="app-card__title">iTrace 자녀 <span style="font-weight:500;color:var(--ink-muted);font-size:.66em;">갤럭시 워치 · 이전 이름 iLog</span></h3>
         <p class="app-card__desc">자녀가 손목에 차는 Galaxy Watch 전용 앱. 가볍고 배터리 효율적입니다.</p>
         <ul class="feat-list">
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>GPS 실시간 위치 추적</li>
@@ -1976,7 +1980,7 @@
           </svg>
         </div>
         <span class="app-card__tag">자녀 스마트폰용</span>
-        <h3 class="app-card__title">iLogMobile <span style="font-weight:500;color:var(--ink-muted);font-size:.66em;">스마트폰</span></h3>
+        <h3 class="app-card__title">iTrace 자녀 <span style="font-weight:500;color:var(--ink-muted);font-size:.66em;">스마트폰 · 이전 이름 iLogMobile</span></h3>
         <p class="app-card__desc">자녀가 가진 스마트폰을 그대로 추적기로 사용합니다. 별도 기기가 필요 없습니다.</p>
         <ul class="feat-list">
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>화면이 꺼져도 위치 자동 추적</li>
@@ -2146,7 +2150,7 @@
       <div class="step reveal">
         <div class="step__num">1</div>
         <h3>자녀 기기 설정</h3>
-        <p>iLog (Galaxy Watch) 또는 iLogMobile (스마트폰)을 자녀 기기에 설치합니다.</p>
+        <p>자녀의 갤럭시 워치나 스마트폰에 「iTrace 자녀」 앱(이전 이름 iLog · iLogMobile)을 설치합니다.</p>
         <div class="step__visual">
           <div class="step-viz-1">
             <div class="mini-device">
@@ -2274,8 +2278,8 @@
     </div>
 
     <p class="pricing__note">
-      ※ SOS 요청 녹화는 자녀 스마트폰(iLogMobile)에서 Android·iPhone 모두 영상+음성으로 저장되며, iLog(Galaxy Watch)는 음성으로 저장됩니다.<br/>
-      ※ 원격 모니터링은 음성으로 제공되며, iLog(Galaxy Watch)·Android 자녀폰(iLogMobile)에서 지원됩니다(iPhone 제외 — iTrace에 모니터링 버튼이 표시되지 않습니다). 결제는 iTrace 앱 내 인앱 구독(App Store · Google Play)으로 진행됩니다.<br/>
+      ※ SOS 요청 녹화는 자녀 스마트폰(iTrace 자녀)에서 Android·iPhone 모두 영상+음성으로 저장되며, 갤럭시 워치(iTrace 자녀)는 음성으로 저장됩니다.<br/>
+      ※ 원격 모니터링은 음성으로 제공되며, 갤럭시 워치·Android 자녀폰에서 지원됩니다(iPhone 제외 — iTrace에 모니터링 버튼이 표시되지 않습니다). 결제는 iTrace 앱 내 인앱 구독(App Store · Google Play)으로 진행됩니다.<br/>
       ※ 7일 무료 체험은 모든 기능을 열어드리며, 체험 기간 중 연결 한도는 자녀 1대·보호자 1명입니다(이후 선택한 구독 플랜의 한도가 적용됩니다). 영구 무료 플랜은 없으며, 체험 후에는 구독을 결제해야 계속 이용할 수 있습니다.
     </p>
   </div>
@@ -2319,7 +2323,7 @@
           </div>
         </div>
         <div class="store-group">
-          <div class="store-group__name">iLogMobile <small>자녀 스마트폰용</small></div>
+          <div class="store-group__name">iTrace 자녀 <small>스마트폰용 · 이전 이름 iLogMobile</small></div>
           <div class="store-group__btns">
             <a href="https://play.google.com/store/apps/details?id=com.iveandor.ilog.mobile" target="_blank" rel="noopener" class="store-btn">
               <span class="store-btn__icon">
@@ -2349,9 +2353,9 @@
           </div>
         </div>
         <div class="store-group">
-          <div class="store-group__name">iLog <small>자녀 갤럭시 워치용</small></div>
+          <div class="store-group__name">iTrace 자녀 <small>갤럭시 워치용 · 이전 이름 iLog</small></div>
           <div class="store-group__btns">
-            <a href="#" class="store-btn store-btn--soon" aria-label="iLog Google Play — 출시 준비중">
+            <a href="#" class="store-btn store-btn--soon" aria-label="iTrace 자녀 갤럭시 워치용 Google Play — 출시 준비중">
               <span class="store-btn__icon">
                 <svg viewBox="0 0 24 24" fill="none">
                   <path d="M5 3.5v17l13-8.5L5 3.5z" fill="#00C853"/>
@@ -2441,14 +2445,14 @@
     <div class="launch-modal__icon" aria-hidden="true">
       <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4.5 16.5c-1.5 1.5-2 5-2 5s3.5-.5 5-2a3.5 3.5 0 0 0-3-3z"/><path d="M12 15l-3-3a12 12 0 0 1 9-9 12 12 0 0 1-9 9z"/><path d="M9 12H4s.5-2.8 2-4a5 5 0 0 1 3 0"/><path d="M12 15v5s2.8-.5 4-2a5 5 0 0 0 0-3"/><circle cx="15" cy="9" r="1.2" fill="currentColor"/></svg>
     </div>
-    <h2 class="launch-modal__title" id="launchModalTitle">iTrace · iLogMobile이 출시되었습니다</h2>
+    <h2 class="launch-modal__title" id="launchModalTitle">iTrace와 자녀 스마트폰 앱이 출시되었습니다</h2>
     <p class="launch-modal__desc" id="launchModalDesc">
-      보호자용 iTrace를 지금 Google Play(Android)와 App Store(iPhone)에서 다운로드할 수 있습니다. 자녀용 iLogMobile(스마트폰)도 <a href="https://play.google.com/store/apps/details?id=com.iveandor.ilog.mobile" target="_blank" rel="noopener">Google Play</a>(Android)와 <a href="https://apps.apple.com/kr/app/ilogmobile/id6768343628" target="_blank" rel="noopener">App Store</a>(iPhone)에서 받을 수 있어요. iLog(갤럭시 워치)는 정식 출시를 준비하고 있어요. 조금만 기다려 주세요!
+      보호자용 iTrace를 지금 Google Play(Android)와 App Store(iPhone)에서 다운로드할 수 있습니다. 자녀 스마트폰용 「iTrace 자녀」(이전 이름 iLogMobile)도 <a href="https://play.google.com/store/apps/details?id=com.iveandor.ilog.mobile" target="_blank" rel="noopener">Google Play</a>(Android)와 <a href="https://apps.apple.com/kr/app/ilogmobile/id6768343628" target="_blank" rel="noopener">App Store</a>(iPhone)에서 받을 수 있어요. 갤럭시 워치용은 정식 출시를 준비하고 있어요. 조금만 기다려 주세요!
     </p>
     <div class="launch-modal__apps">
       <span class="launch-modal__app">iTrace <small>보호자용 · Google Play · App Store 출시</small></span>
-      <span class="launch-modal__app">iLog <small>갤럭시 워치 · 준비중</small></span>
-      <span class="launch-modal__app">iLogMobile <small>스마트폰 · Google Play · App Store 출시</small></span>
+      <span class="launch-modal__app">iTrace 자녀 <small>갤럭시 워치 · 준비중</small></span>
+      <span class="launch-modal__app">iTrace 자녀 <small>스마트폰 · Google Play · App Store 출시</small></span>
     </div>
     <a class="launch-modal__btn" href="https://play.google.com/store/apps/details?id=com.iveandor.itrace" target="_blank" rel="noopener">Google Play에서 iTrace 받기</a>
     <a class="launch-modal__btn launch-modal__btn--dark" href="https://apps.apple.com/kr/app/itrace/id6761924543" target="_blank" rel="noopener">App Store에서 iTrace 받기</a>

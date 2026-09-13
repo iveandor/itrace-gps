@@ -6,8 +6,8 @@
 <meta name="theme-color" content="#FF7A45" />
 <title>기기 권한 설정 가이드 — iTrace &amp; iLog &amp; iLogMobile</title>
 <!-- SEO -->
-<meta name="description" content="iLogMobile(스마트폰)·iLog(갤럭시 워치)·iTrace(보호자용) 앱의 필수 권한 설정 방법을 기기별로 안내합니다." />
-<meta name="keywords" content="iLogMobile 권한 설정, iTrace 권한, 위치 권한 허용, 배터리 최적화 제외, 갤럭시 워치 권한, Android iOS 권한" />
+<meta name="description" content="iTrace 자녀(스마트폰·갤럭시 워치)와 iTrace(보호자용) 앱의 필수 권한 설정 방법을 기기별로 안내합니다." />
+<meta name="keywords" content="iTrace 자녀 권한 설정, iLogMobile 권한 설정, iTrace 권한, 위치 권한 허용, 배터리 최적화 제외, 갤럭시 워치 권한, Android iOS 권한" />
 <meta name="author" content="iveandor" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://itrace.iveandor.com/permissions_guide.html" />
@@ -24,7 +24,7 @@
 <meta property="og:type" content="article" />
 <meta property="og:site_name" content="iTrace &amp; iLog &amp; iLogMobile" />
 <meta property="og:title" content="기기 권한 설정 가이드 — iTrace &amp; iLog &amp; iLogMobile" />
-<meta property="og:description" content="iLogMobile·iLog·iTrace 앱의 필수 권한 설정 방법을 플랫폼별로 안내합니다." />
+<meta property="og:description" content="iTrace 자녀·iTrace 앱의 필수 권한 설정 방법을 플랫폼별로 안내합니다." />
 <meta property="og:url" content="https://itrace.iveandor.com/permissions_guide.html" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="https://itrace.iveandor.com/og-image.png" />
@@ -34,7 +34,7 @@
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
 <meta name="twitter:title" content="기기 권한 설정 가이드 — iTrace &amp; iLog &amp; iLogMobile" />
-<meta name="twitter:description" content="iLogMobile·iLog·iTrace 앱의 필수 권한 설정 방법을 안내합니다." />
+<meta name="twitter:description" content="iTrace 자녀·iTrace 앱의 필수 권한 설정 방법을 안내합니다." />
 <meta name="twitter:image" content="https://itrace.iveandor.com/og-image.png" />
 <!-- JSON-LD -->
 <script type="application/ld+json">
@@ -46,7 +46,7 @@
       "@id": "https://itrace.iveandor.com/permissions_guide.html",
       "url": "https://itrace.iveandor.com/permissions_guide.html",
       "name": "기기 권한 설정 가이드",
-      "description": "iLogMobile·iLog·iTrace 앱의 필수 권한 설정 방법 (Android·iOS·갤럭시 워치)",
+      "description": "iTrace 자녀(이전 이름 iLogMobile·iLog)·iTrace 앱의 필수 권한 설정 방법 (Android·iOS·갤럭시 워치)",
       "inLanguage": "ko-KR",
       "isPartOf": { "@id": "https://itrace.iveandor.com/#website" },
       "publisher": {
@@ -675,11 +675,11 @@
     </span>
     <h1>기기 권한 설정 가이드</h1>
     <p class="ph__intro">
-      iLog(갤럭시 워치) · iLogMobile(스마트폰) · iTrace(보호자용)가 정상적으로 동작하려면 기기의 위치·배터리·알림 권한이 올바르게 설정되어야 합니다.
+      iTrace 자녀(스마트폰용 · 이전 이름 iLogMobile) · iTrace 자녀(갤럭시 워치용 · 이전 이름 iLog) · iTrace(보호자용)가 정상적으로 동작하려면 기기의 위치·배터리·알림 권한이 올바르게 설정되어야 합니다.
       특히 <strong>백그라운드 위치 추적</strong>은 설정이 잘못되면 앱 화면이 꺼진 상태에서 수집이 중단될 수 있습니다.
     </p>
     <div class="ph__meta">
-      <span class="item"><span class="dot"></span>최종 수정일 <strong>2026. 9. 1.</strong></span>
+      <span class="item"><span class="dot"></span>최종 수정일 <strong>2026. 9. 13.</strong></span>
       <span class="item"><span class="dot"></span>5개 플랫폼별 안내 + 요약표</span>
     </div>
   </div>
@@ -697,15 +697,15 @@
       <ol class="toc__list">
         <li><a href="#mobile-android">
           <span class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 18h4"/></svg></span>
-          iLogMobile · Android
+          스마트폰 · Android
         </a></li>
         <li><a href="#mobile-ios">
           <span class="plat-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.7 2.2-4 2.3-4.06-1.25-1.83-3.2-2.08-3.9-2.11-1.66-.17-3.24.97-4.08.97-.85 0-2.14-.95-3.52-.92-1.81.03-3.48 1.05-4.41 2.67-1.88 3.26-.48 8.09 1.35 10.74.9 1.3 1.96 2.74 3.34 2.7 1.34-.05 1.85-.87 3.47-.87 1.62 0 2.08.87 3.5.84 1.44-.03 2.36-1.31 3.24-2.62 1.02-1.5 1.44-2.96 1.46-3.04-.03-.01-2.8-1.07-2.83-4.27z"/></svg></span>
-          iLogMobile · iOS
+          스마트폰 · iOS
         </a></li>
         <li><a href="#ilog-wear">
           <span class="plat-ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6V3h6v3M9 18v3h6v-3"/></svg></span>
-          iLog · 갤럭시 워치
+          갤럭시 워치
         </a></li>
       </ol>
 
@@ -742,27 +742,36 @@
             <p>문제가 발생하면 아래 가이드의 설정을 다시 확인해 주세요.</p>
           </div>
         </div>
+        <div class="info info--tip" style="margin:12px 0 0;">
+          <span class="info__icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke-width="2.5"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+          </span>
+          <div>
+            <strong>자녀 앱 이름이 「iTrace 자녀」로 바뀌었습니다</strong>
+            <p>이전 이름 iLogMobile(스마트폰)과 iLog(갤럭시 워치)은 이름만 바뀐 같은 앱입니다. 스토어에서는 「iTrace 자녀 - 스마트폰용」 · 「iTrace 자녀 - 갤럭시워치용」, 기기 화면과 설정의 앱 목록에서는 「iTrace 자녀」로 보입니다. 앱을 아직 업데이트하지 않았다면 이전 이름으로 보일 수 있어요. 보호자용 앱은 그대로 iTrace 입니다.</p>
+          </div>
+        </div>
       </div>
 
       <!-- §1 iLogMobile Android -->
       <section id="mobile-android">
         <h2>
           <span class="badge badge--child">자녀 앱</span>
-          <span class="app-name">iLogMobile</span>
+          <span class="app-name">iTrace 자녀</span>
           <span class="badge badge--android">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"/><path d="M10 18h4"/></svg>
             Android
           </span>
         </h2>
         <p class="sec-intro">
-          iLogMobile은 백그라운드에서 지속적으로 위치를 수집하는 앱입니다. 아래 설정이 빠지면 화면이 꺼진 후 위치 업데이트가 중단됩니다.
+          iTrace 자녀 앱은 백그라운드에서 지속적으로 위치를 수집하는 앱입니다. 아래 설정이 빠지면 화면이 꺼진 후 위치 업데이트가 중단됩니다.
         </p>
 
         <h3>위치 권한 — 항상 허용</h3>
         <ol class="steps">
           <li><div>기기 <span class="path">설정</span> 앱을 엽니다.</div></li>
           <li><div><span class="path">앱</span> (또는 애플리케이션 관리자) 을 선택합니다.</div></li>
-          <li><div><span class="path">iLog Mobile</span> 을 찾아 탭합니다.</div></li>
+          <li><div><span class="path">iTrace 자녀</span> 을 찾아 탭합니다.</div></li>
           <li><div><span class="path">권한</span> <span class="arrow">›</span> <span class="path">위치</span> 를 선택합니다.</div></li>
           <li><div><strong>항상 허용</strong>을 선택합니다. ("앱 사용 중에만"은 백그라운드 추적이 중단됩니다.)</div></li>
         </ol>
@@ -770,35 +779,35 @@
         <h3>배터리 최적화 제외</h3>
         <ol class="steps">
           <li><div>기기 <span class="path">설정</span> 앱을 엽니다.</div></li>
-          <li><div><span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> 을 선택합니다.</div></li>
+          <li><div><span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> 을 선택합니다.</div></li>
           <li><div><span class="path">배터리</span> 를 탭합니다.</div></li>
           <li><div><strong>제한 없음</strong>을 선택합니다. (기본값 "최적화"는 위치 수집을 방해합니다.)</div></li>
         </ol>
 
         <h3>알림 권한 (Android 13 이상)</h3>
         <ol class="steps">
-          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">알림</span> 을 선택합니다.</div></li>
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">알림</span> 을 선택합니다.</div></li>
           <li><div><strong>알림 허용</strong>을 활성화합니다.</div></li>
         </ol>
 
         <h3>신체 활동 인식 권한 (Android 10 이상)</h3>
         <p>활동 상태(이동/정지) 감지 및 배터리 절약 기능에 필요합니다.</p>
         <ol class="steps">
-          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">권한</span> 을 선택합니다.</div></li>
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">권한</span> 을 선택합니다.</div></li>
           <li><div><span class="path">신체 활동</span> (또는 <span class="path">활동 인식</span>) <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
         <h3>마이크 권한 (SOS 음성 녹음 · 원격 모니터링)</h3>
         <p>SOS 발생 시 자동 음성 녹음 및 보호자의 원격 오디오 모니터링 기능에 필요합니다.</p>
         <ol class="steps">
-          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">권한</span> 을 선택합니다.</div></li>
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">권한</span> 을 선택합니다.</div></li>
           <li><div><span class="path">마이크</span> <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
         <h3>카메라 권한 (SOS 영상 녹화)</h3>
         <p>SOS 발생 시 현장 영상 녹화 기능에 필요합니다. SOS 영상 녹화는 자녀 스마트폰(Android·iPhone) 모두에서 동작합니다. (원격 모니터링은 음성만 제공되어 카메라를 사용하지 않습니다.)</p>
         <ol class="steps">
-          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">권한</span> 을 선택합니다.</div></li>
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">권한</span> 을 선택합니다.</div></li>
           <li><div><span class="path">카메라</span> <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
@@ -822,8 +831,8 @@
               </div>
             </div>
             <ul>
-              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">배터리</span> <span class="arrow">›</span> <span class="path">백그라운드 사용 제한</span> 에서 iLog Mobile 제외</li>
-              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">배터리</span> <span class="arrow">›</span> <span class="path">절전 모드</span> 비활성화 또는 iLog Mobile 제외</li>
+              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">배터리</span> <span class="arrow">›</span> <span class="path">백그라운드 사용 제한</span> 에서 iTrace 자녀 제외</li>
+              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">배터리</span> <span class="arrow">›</span> <span class="path">절전 모드</span> 비활성화 또는 iTrace 자녀 제외</li>
             </ul>
           </div>
 
@@ -836,8 +845,8 @@
               </div>
             </div>
             <ul>
-              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">배터리 절약</span> <span class="arrow">›</span> <strong>제한 없음</strong></li>
-              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">자동 시작</span> 활성화</li>
+              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">배터리 절약</span> <span class="arrow">›</span> <strong>제한 없음</strong></li>
+              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">자동 시작</span> 활성화</li>
             </ul>
           </div>
 
@@ -850,8 +859,8 @@
               </div>
             </div>
             <ul>
-              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">배터리</span> <span class="arrow">›</span> <span class="path">배터리 최적화</span> <span class="arrow">›</span> iLog Mobile <span class="arrow">›</span> <strong>최적화 안 함</strong></li>
-              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱 관리</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">빠른 동결</span> 비활성화</li>
+              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">배터리</span> <span class="arrow">›</span> <span class="path">배터리 최적화</span> <span class="arrow">›</span> iTrace 자녀 <span class="arrow">›</span> <strong>최적화 안 함</strong></li>
+              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱 관리</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">빠른 동결</span> 비활성화</li>
             </ul>
           </div>
 
@@ -864,7 +873,7 @@
               </div>
             </div>
             <ul>
-              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">일반</span> <span class="arrow">›</span> <span class="path">배터리 및 전원 절약</span> <span class="arrow">›</span> <span class="path">배터리 사용 최적화</span> 에서 iLog Mobile 제외</li>
+              <li><span class="path">설정</span> <span class="arrow">›</span> <span class="path">일반</span> <span class="arrow">›</span> <span class="path">배터리 및 전원 절약</span> <span class="arrow">›</span> <span class="path">배터리 사용 최적화</span> 에서 iTrace 자녀 제외</li>
             </ul>
           </div>
         </div>
@@ -874,7 +883,7 @@
       <section id="mobile-ios">
         <h2>
           <span class="badge badge--child">자녀 앱</span>
-          <span class="app-name">iLogMobile</span>
+          <span class="app-name">iTrace 자녀</span>
           <span class="badge badge--ios">
             <svg viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 12.04c-.03-2.7 2.2-4 2.3-4.06-1.25-1.83-3.2-2.08-3.9-2.11-1.66-.17-3.24.97-4.08.97-.85 0-2.14-.95-3.52-.92-1.81.03-3.48 1.05-4.41 2.67-1.88 3.26-.48 8.09 1.35 10.74.9 1.3 1.96 2.74 3.34 2.7 1.34-.05 1.85-.87 3.47-.87 1.62 0 2.08.87 3.5.84 1.44-.03 2.36-1.31 3.24-2.62 1.02-1.5 1.44-2.96 1.46-3.04-.03-.01-2.8-1.07-2.83-4.27z"/></svg>
             iOS
@@ -884,7 +893,7 @@
         <h3>위치 권한 — 항상</h3>
         <ol class="steps">
           <li><div>iPhone <span class="path">설정</span> 앱을 엽니다.</div></li>
-          <li><div>앱 목록에서 <span class="path">iLog Mobile</span> 을 탭합니다.</div></li>
+          <li><div>앱 목록에서 <span class="path">iTrace 자녀</span> 을 탭합니다.</div></li>
           <li><div><span class="path">위치</span> 를 탭합니다.</div></li>
           <li><div><strong>항상</strong>을 선택합니다. ("앱 사용 중"을 선택하면 화면이 꺼질 때 GPS가 중단됩니다.)</div></li>
           <li><div><strong>정확한 위치</strong> 토글을 켭니다.</div></li>
@@ -892,21 +901,21 @@
 
         <h3>백그라운드 앱 새로 고침</h3>
         <ol class="steps">
-          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> 을 탭합니다.</div></li>
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> 을 탭합니다.</div></li>
           <li><div><strong>백그라운드 앱 새로 고침</strong>을 활성화합니다.</div></li>
         </ol>
 
         <h3>마이크 권한 (SOS 음성 녹음)</h3>
         <p>SOS 발생 시 자동으로 주변 음성을 녹음하는 데 필요합니다. iPhone은 <strong>원격 모니터링을 지원하지 않습니다</strong> — iOS는 화면이 잠기거나 앱이 백그라운드인 상태에서 새 녹음을 시작할 수 없기 때문입니다(원격 모니터링은 갤럭시 워치와 Android 자녀폰에서 지원).</p>
         <ol class="steps">
-          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">마이크</span> 를 탭합니다.</div></li>
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">마이크</span> 를 탭합니다.</div></li>
           <li><div><strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
         <h3>카메라 권한 (SOS 영상 녹화)</h3>
         <p>SOS 발생 시 현장 영상을 녹화하는 데 필요합니다. iPhone에서도 SOS 영상 녹화가 동작합니다. (원격 모니터링은 음성만 제공되어 카메라를 사용하지 않습니다.)</p>
         <ol class="steps">
-          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">iLog Mobile</span> <span class="arrow">›</span> <span class="path">카메라</span> 를 탭합니다.</div></li>
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">카메라</span> 를 탭합니다.</div></li>
           <li><div><strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
@@ -923,26 +932,26 @@
       <section id="ilog-wear">
         <h2>
           <span class="badge badge--child">자녀 앱</span>
-          <span class="app-name">iLog</span>
+          <span class="app-name">iTrace 자녀</span>
           <span class="badge badge--wear">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="6" width="12" height="12" rx="3"/><path d="M9 6V3h6v3M9 18v3h6v-3"/></svg>
             갤럭시 워치
           </span>
         </h2>
         <p class="sec-intro">
-          iLog는 갤럭시 워치에서 단독으로 동작하는 앱이며, 권한은 연결된 스마트폰이 아니라 워치에서 직접 설정합니다.
+          갤럭시 워치용 iTrace 자녀 앱은 워치에서 단독으로 동작하며, 권한은 연결된 스마트폰이 아니라 워치에서 직접 설정합니다.
         </p>
 
         <h3>위치 권한 — 항상 허용</h3>
         <ol class="steps">
-          <li><div>워치에서 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog</span> 를 탭합니다.</div></li>
+          <li><div>워치에서 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> 를 탭합니다.</div></li>
           <li><div><span class="path">권한</span> <span class="arrow">›</span> <span class="path">위치</span> <span class="arrow">›</span> <strong>항상 허용</strong>을 선택합니다.</div></li>
         </ol>
 
         <h3>마이크 권한 (SOS 음성 녹음)</h3>
         <p>SOS 발생 시 주변 음성을 자동으로 녹음하는 데 필요합니다.</p>
         <ol class="steps">
-          <li><div>워치에서 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iLog</span> <span class="arrow">›</span> <span class="path">권한</span> <span class="arrow">›</span> <span class="path">마이크</span> <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
+          <li><div>워치에서 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">권한</span> <span class="arrow">›</span> <span class="path">마이크</span> <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
         <h3>배터리 최적화 (갤럭시 워치)</h3>
@@ -952,7 +961,7 @@
           <span class="info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke-width="2.5"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg></span>
           <div>
             <strong>앱 내 진단 화면 활용</strong>
-            <p>iLog 앱 → 설정 → 진단 화면에서 위치 권한 등 워치에서 변경 가능한 항목은 해당 항목을 탭하면 자동으로 설정 화면으로 이동할 수 있습니다. 단, 배터리 최적화 항목은 Galaxy Watch에서 직접 변경할 수 없어 안내만 표시되며 탭해도 이동하지 않습니다.</p>
+            <p>iTrace 자녀 앱 → 설정 → 진단 화면에서 위치 권한 등 워치에서 변경 가능한 항목은 해당 항목을 탭하면 자동으로 설정 화면으로 이동할 수 있습니다. 단, 배터리 최적화 항목은 Galaxy Watch에서 직접 변경할 수 없어 안내만 표시되며 탭해도 이동하지 않습니다.</p>
           </div>
         </div>
       </section>
@@ -1030,7 +1039,7 @@
             </thead>
             <tbody>
               <tr>
-                <td><strong>iLogMobile</strong></td>
+                <td><strong>iTrace 자녀(스마트폰)</strong></td>
                 <td><span class="badge badge--android">Android</span></td>
                 <td class="req">항상 허용</td>
                 <td class="req">제한 없음</td>
@@ -1040,7 +1049,7 @@
                 <td class="req">허용 (SOS 영상)</td>
               </tr>
               <tr>
-                <td><strong>iLogMobile</strong></td>
+                <td><strong>iTrace 자녀(스마트폰)</strong></td>
                 <td><span class="badge badge--ios">iOS</span></td>
                 <td class="req">항상</td>
                 <td class="na">—</td>
@@ -1050,7 +1059,7 @@
                 <td class="req">허용 (SOS 영상)</td>
               </tr>
               <tr>
-                <td><strong>iLog</strong></td>
+                <td><strong>iTrace 자녀(워치)</strong></td>
                 <td><span class="badge badge--wear">갤럭시 워치</span></td>
                 <td class="req">항상 허용</td>
                 <td class="na">직접 설정 불가</td>

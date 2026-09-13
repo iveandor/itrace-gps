@@ -45,3 +45,14 @@
       `store-btn--soon` 클래스·aria-label 제거 + `.top` 라벨을 "GET IT ON"/"Download on the"로 교체
       (모달 자동 제외됨 — 스크립트가 `href="#"`인 버튼만 모달로 연결)
 - [ ] 전체 앱(iLog·iLogMobile·iOS) 출시 완료 시: `#launchModal` 및 자동표시 제거
+
+### 5. 자녀 앱 개명("iTrace 자녀") 과도기 표기 (2026-09-13 반영)
+자녀 앱 표시명이 iLogMobile·iLog → 「iTrace 자녀」로 바뀌었지만 3앱 배포·스토어명 변경이 날짜별로 나뉘어,
+사이트는 **새 이름 + "이전 이름" 병기**로 옮겼다(배포 순서와 무관하게 맞도록).
+- [ ] **push 시점**: App Store 새 버전 출시 · iTrace 새 빌드 출시 · Play 스토어명 변경 중 가장 빠른 것의 직전/당일
+- [ ] 스토어 5곳(Play 3 · App Store 2) 제목이 모두 새 이름으로 바뀐 것 확인
+- [ ] 한동안 뒤(미업데이트 기기가 줄면): 안내 박스(`user_guide` §1 · `permissions_guide` 상단 · `index` `#apps` 한 줄)와
+      카드·CTA의 "이전 이름 …" 표기 제거. **FAQ "iLogMobile · iLog 앱이 보이지 않아요"와 `pairing_guide` 의 "업데이트 전" 보조문구는 가장 늦게 제거**
+- [ ] 법적 문서(`privacy_policy`·`terms_of_use`·`account_deletion`)는 이번엔 "스토어·기기 표시명 「iTrace 자녀」" 한 줄만 넣었다 —
+      본문 앱명 전환은 다음 개정(시행일 변경) 때 법률 검토와 함께
+- [ ] 브랜드 워드마크 `iTrace & iLog & iLogMobile`(title·nav·footer·©)와 JSON-LD `alternateName` 정리 여부 결정
