@@ -3,7 +3,8 @@
 ## SEO 최적화 후속 작업 (2026-08-17 감사분)
 
 ### 1. 배포 (필수)
-- [ ] SEO 수정분 커밋 & 푸시 (GitHub Pages — 푸시 전에는 반영 안 됨)
+- [x] SEO 수정분 커밋 & 푸시 (GitHub Pages — 푸시 전에는 반영 안 됨) — **완료**: `12f2948`(2026-08-17) 푸시·반영
+      (2026-09-14 확인: `sitemap.xml` x-default · 7개 HTML og:image:alt · `as="style"` 0건 · 라이브 `404.html` 200)
   - 변경 파일: `index.html`(iLog JSON-LD 노드·Organization logo·og:image:alt·문구),
     나머지 5개 HTML(`as="style"` 제거·og:image:alt), `sitemap.xml`(x-default·lastmod),
     신규 `404.html`
@@ -49,7 +50,9 @@
 ### 5. 자녀 앱 개명("iTrace 자녀") 과도기 표기 (2026-09-13 반영)
 자녀 앱 표시명이 iLogMobile·iLog → 「iTrace 자녀」로 바뀌었지만 3앱 배포·스토어명 변경이 날짜별로 나뉘어,
 사이트는 **새 이름 + "이전 이름" 병기**로 옮겼다(배포 순서와 무관하게 맞도록).
-- [ ] **push 시점**: App Store 새 버전 출시 · iTrace 새 빌드 출시 · Play 스토어명 변경 중 가장 빠른 것의 직전/당일
+- [x] **push 시점**: App Store 새 버전 출시 · iTrace 새 빌드 출시 · Play 스토어명 변경 중 가장 빠른 것의 직전/당일
+      — **push 됨**: `1dd9fcf` origin/main 반영 · 라이브에 "이전 이름" 병기 노출 확인(2026-09-14). 스토어명 변경·1.2.0 출시보다
+      **먼저** 나갔지만 병기 표기라 순서와 무관하게 맞다(위 문단)
 - [ ] 스토어 5곳(Play 3 · App Store 2) 제목이 모두 새 이름으로 바뀐 것 확인
 - [ ] 한동안 뒤(미업데이트 기기가 줄면): 안내 박스(`user_guide` §1 · `permissions_guide` 상단 · `index` `#apps` 한 줄)와
       카드·CTA의 "이전 이름 …" 표기 제거. **FAQ "iLogMobile · iLog 앱이 보이지 않아요"와 `pairing_guide` 의 "업데이트 전" 보조문구는 가장 늦게 제거**
