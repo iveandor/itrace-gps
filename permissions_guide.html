@@ -4,10 +4,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
 <meta name="theme-color" content="#FF7A45" />
-<title>기기 권한 설정 가이드 — iTrace &amp; iLog &amp; iLogMobile</title>
+<title>기기 권한 설정 가이드 — iTrace</title>
 <!-- SEO -->
 <meta name="description" content="iTrace 자녀(스마트폰·갤럭시 워치)와 iTrace(보호자용) 앱의 필수 권한 설정 방법을 기기별로 안내합니다." />
-<meta name="keywords" content="iTrace 자녀 권한 설정, iLogMobile 권한 설정, iTrace 권한, 위치 권한 허용, 배터리 최적화 제외, 갤럭시 워치 권한, Android iOS 권한" />
+<meta name="keywords" content="iTrace 자녀 권한 설정, iTrace 권한, 위치 권한 허용, 배터리 최적화 제외, 갤럭시 워치 권한, Android iOS 권한" />
 <meta name="author" content="iveandor" />
 <meta name="robots" content="index, follow" />
 <link rel="canonical" href="https://itrace.iveandor.com/permissions_guide.html" />
@@ -22,18 +22,18 @@
 <link rel="icon" type="image/png" sizes="512x512" href="favicon-512.png" />
 <!-- Open Graph -->
 <meta property="og:type" content="article" />
-<meta property="og:site_name" content="iTrace &amp; iLog &amp; iLogMobile" />
-<meta property="og:title" content="기기 권한 설정 가이드 — iTrace &amp; iLog &amp; iLogMobile" />
+<meta property="og:site_name" content="iTrace" />
+<meta property="og:title" content="기기 권한 설정 가이드 — iTrace" />
 <meta property="og:description" content="iTrace 자녀·iTrace 앱의 필수 권한 설정 방법을 플랫폼별로 안내합니다." />
 <meta property="og:url" content="https://itrace.iveandor.com/permissions_guide.html" />
 <meta property="og:locale" content="ko_KR" />
 <meta property="og:image" content="https://itrace.iveandor.com/og-image.png" />
 <meta property="og:image:width" content="1200" />
 <meta property="og:image:height" content="630" />
-<meta property="og:image:alt" content="iTrace &amp; iLog &amp; iLogMobile — 가족 위치 추적 서비스 소개 이미지" />
+<meta property="og:image:alt" content="iTrace — 가족 위치 추적 서비스 소개 이미지" />
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary_large_image" />
-<meta name="twitter:title" content="기기 권한 설정 가이드 — iTrace &amp; iLog &amp; iLogMobile" />
+<meta name="twitter:title" content="기기 권한 설정 가이드 — iTrace" />
 <meta name="twitter:description" content="iTrace 자녀·iTrace 앱의 필수 권한 설정 방법을 안내합니다." />
 <meta name="twitter:image" content="https://itrace.iveandor.com/og-image.png" />
 <!-- JSON-LD -->
@@ -46,7 +46,7 @@
       "@id": "https://itrace.iveandor.com/permissions_guide.html",
       "url": "https://itrace.iveandor.com/permissions_guide.html",
       "name": "기기 권한 설정 가이드",
-      "description": "iTrace 자녀(이전 이름 iLogMobile·iLog)·iTrace 앱의 필수 권한 설정 방법 (Android·iOS·갤럭시 워치)",
+      "description": "iTrace 자녀·iTrace 앱의 필수 권한 설정 방법 (Android·iOS·갤럭시 워치)",
       "inLanguage": "ko-KR",
       "isPartOf": { "@id": "https://itrace.iveandor.com/#website" },
       "publisher": {
@@ -653,7 +653,7 @@
 <!-- ============ NAV ============ -->
 <nav class="nav" id="nav">
   <div class="container nav__inner">
-    <a class="brand" href="/" aria-label="iTrace &amp; iLog &amp; iLogMobile home">
+    <a class="brand" href="/" aria-label="iTrace home">
       <span class="brand__mark" aria-hidden="true">
         <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
           <path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13z"/>
@@ -678,7 +678,7 @@
     </span>
     <h1>기기 권한 설정 가이드</h1>
     <p class="ph__intro">
-      iTrace 자녀(스마트폰용 · 이전 이름 iLogMobile) · iTrace 자녀(갤럭시 워치용 · 이전 이름 iLog) · iTrace(보호자용)가 정상적으로 동작하려면 기기의 위치·배터리·알림 권한이 올바르게 설정되어야 합니다.
+      iTrace 자녀(스마트폰용) · iTrace 자녀(갤럭시 워치용) · iTrace(보호자용)가 정상적으로 동작하려면 기기의 위치·배터리·알림 권한이 올바르게 설정되어야 합니다.
       특히 <strong>백그라운드 위치 추적</strong>은 설정이 잘못되면 앱 화면이 꺼진 상태에서 수집이 중단될 수 있습니다.
     </p>
     <div class="ph__meta">
@@ -745,18 +745,9 @@
             <p>문제가 발생하면 아래 가이드의 설정을 다시 확인해 주세요.</p>
           </div>
         </div>
-        <div class="info info--tip" style="margin:12px 0 0;">
-          <span class="info__icon">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke-width="2.5"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
-          </span>
-          <div>
-            <strong>자녀 앱 이름이 「iTrace 자녀」로 바뀌었습니다</strong>
-            <p>이전 이름 iLogMobile(스마트폰)과 iLog(갤럭시 워치)은 이름만 바뀐 같은 앱입니다. 스토어에서는 「iTrace 자녀 - 스마트폰용」 · 「iTrace 자녀 - 갤럭시워치용」, 기기 화면과 설정의 앱 목록에서는 「iTrace 자녀」로 보입니다. 앱을 아직 업데이트하지 않았다면 이전 이름으로 보일 수 있어요. 보호자용 앱은 그대로 iTrace 입니다.</p>
-          </div>
-        </div>
       </div>
 
-      <!-- §1 iLogMobile Android -->
+      <!-- §1 iTrace 자녀 스마트폰 Android -->
       <section id="mobile-android">
         <h2>
           <span class="badge badge--child">자녀 앱</span>
@@ -882,7 +873,7 @@
         </div>
       </section>
 
-      <!-- §2 iLogMobile iOS -->
+      <!-- §2 iTrace 자녀 스마트폰 iOS -->
       <section id="mobile-ios">
         <h2>
           <span class="badge badge--child">자녀 앱</span>
@@ -931,7 +922,7 @@
         </div>
       </section>
 
-      <!-- §3 iLog Wear OS -->
+      <!-- §3 iTrace 자녀 갤럭시 워치 (Wear OS) -->
       <section id="ilog-wear">
         <h2>
           <span class="badge badge--child">자녀 앱</span>
@@ -1121,7 +1112,7 @@
           <span class="brand__mark" aria-hidden="true">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s7-7.58 7-13a7 7 0 1 0-14 0c0 5.42 7 13 7 13z"/><circle cx="12" cy="9" r="2.5"/></svg>
           </span>
-          iTrace &amp; iLog &amp; iLogMobile
+          iTrace
         </a>
         <span class="tagline">가족의 안전을 연결합니다</span>
         <a class="foot__social" href="https://www.instagram.com/iveandor.itrace/" target="_blank" rel="noopener" aria-label="iTrace 인스타그램 (새 창)">
@@ -1165,7 +1156,7 @@
       </div>
     </dl>
     <div class="foot__copy">
-      <span>© 2026 iTrace &amp; iLog &amp; iLogMobile. All rights reserved.</span>
+      <span>© 2026 iTrace. All rights reserved.</span>
       <span>Made for families.</span>
     </div>
   </div>

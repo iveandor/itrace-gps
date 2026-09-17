@@ -47,19 +47,24 @@
       (모달 자동 제외됨 — 스크립트가 `href="#"`인 버튼만 모달로 연결)
 - [ ] 전체 앱(iLog·iLogMobile·iOS) 출시 완료 시: `#launchModal` 및 자동표시 제거
 
-### 5. 자녀 앱 개명("iTrace 자녀") 과도기 표기 (2026-09-13 반영)
+### 5. 자녀 앱 개명("iTrace 자녀") 과도기 표기 (2026-09-13 반영 → 2026-09-18 정리 완료)
 자녀 앱 표시명이 iLogMobile·iLog → 「iTrace 자녀」로 바뀌었지만 3앱 배포·스토어명 변경이 날짜별로 나뉘어,
-사이트는 **새 이름 + "이전 이름" 병기**로 옮겼다(배포 순서와 무관하게 맞도록).
-- [x] **push 시점**: App Store 새 버전 출시 · iTrace 새 빌드 출시 · Play 스토어명 변경 중 가장 빠른 것의 직전/당일
-      — **push 됨**: `1dd9fcf` origin/main 반영 · 라이브에 "이전 이름" 병기 노출 확인(2026-09-14). 스토어명 변경·1.2.0 출시보다
-      **먼저** 나갔지만 병기 표기라 순서와 무관하게 맞다(위 문단)
-- [ ] 스토어 5곳(Play 3 · App Store 2) 제목이 모두 새 이름으로 바뀐 것 확인
-- [ ] 한동안 뒤(미업데이트 기기가 줄면): 안내 박스(`user_guide` §1 · `permissions_guide` 상단 · `index` `#apps` 한 줄)와
-      카드·CTA의 "이전 이름 …" 표기 제거. **FAQ "iLogMobile · iLog 앱이 보이지 않아요"와 `pairing_guide` 의 "업데이트 전" 보조문구는 가장 늦게 제거**
-- [ ] 법적 문서(`privacy_policy`·`terms_of_use`·`account_deletion`)는 이번엔 "스토어·기기 표시명 「iTrace 자녀」" 한 줄만 넣었다 —
-      본문 앱명 전환은 다음 개정(시행일 변경) 때 법률 검토와 함께. `legal/versions.json` 도 미변경(의도 — 시행일이 안 바뀌었으므로
-      버전도 그대로. 아래 §6 절차는 시행일이 바뀌는 개정에만 적용)
-- [ ] 브랜드 워드마크 `iTrace & iLog & iLogMobile`(title·nav·footer·©)와 JSON-LD `alternateName` 정리 여부 결정
+사이트는 한동안 **새 이름 + "이전 이름" 병기**로 썼다. 2026-09-18 오너 확인(Android·iOS 모두 새 이름으로 배포됨)으로
+"이전 이름" 표기를 전부 걷어냈다.
+- [x] **push 시점**: `1dd9fcf` origin/main 반영 · 라이브에 "이전 이름" 병기 노출 확인(2026-09-14)
+- [x] 스토어 제목이 새 이름인지 공개 데이터로 확인(2026-09-18): App Store `iTrace - 자녀 위치 안심`(id6761924543) ·
+      `iTrace 자녀`(id6768343628, 1.2.2 · 09-17) / Play `iTrace - 자녀 위치 안심` · `iTrace 자녀 - 스마트폰용`.
+      갤럭시 워치용 Play 는 여전히 미출시(웹 페이지 404) — CTA `--soon` 유지
+- [x] "이전 이름 …" 표기 제거(2026-09-18): 안내 박스(`user_guide` §1 · `permissions_guide` 상단 · `index` `#apps` 한 줄 + CSS
+      `.apps__rename`) · 카드·CTA `<small>` · 런치 모달 · JSON-LD HowTo/HowToTool 문구 · `pairing_guide` "업데이트 전" 보조문구 ·
+      FAQ "iLogMobile · iLog 앱이 보이지 않아요"(화면 + FAQPage JSON-LD 함께 삭제, 12↔12 유지) · Tweaks 라벨 · 주석
+- [x] 브랜드 워드마크 `iTrace & iLog & iLogMobile` → **`iTrace`** 로 통일(2026-09-18): 8개 HTML 의 title · og/twitter · nav
+      aria-label · footer · © · WebSite JSON-LD `name` · `site.webmanifest` `name`. `keywords` 메타의 옛 이름도 제거
+- [x] JSON-LD `alternateName`(`index.html` 자녀 앱 노드 2개의 `iLog` · `iLogMobile`)은 **의도적으로 유지** — 화면에 안 보이고,
+      옛 이름으로 검색하는 기존 사용자를 사이트로 연결하는 유일한 기계용 단서. 지우려면 이 항목을 근거로 결정
+- [ ] 법적 문서 3종(`privacy_policy`·`terms_of_use`·`account_deletion`)은 **본문 앱명(iLog · iLogMobile)을 그대로 두었다** —
+      09-18 정리는 title/meta/nav/footer 의 워드마크만. 본문 전환은 다음 개정(시행일 변경) 때 법률 검토와 함께, 아래 §6 절차로.
+      `legal/versions.json` 미변경(시행일이 안 바뀌었으므로)
 
 ### 6. 법적 문서 개정 절차 (약관 버전관리, 2026-09-14 도입)
 앱(iTrace 가입·iLogMobile 연동)은 `legal/versions.json` 의 `version`(= **시행일**, `YYYY-MM-DD`)을 동의 버전으로 서버에
