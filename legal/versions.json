@@ -12,12 +12,12 @@
     },
     "privacy": {
       "url": "https://itrace.iveandor.com/privacy_policy.html",
-      "version": "2026-09-16",
-      "revisedAt": "2026-09-09",
-      "noticeFrom": "2026-09-09",
+      "version": "2026-09-26",
+      "revisedAt": "2026-09-19",
+      "noticeFrom": "2026-09-19",
       "requiresExplicitConsent": false,
-      "summary": "인앱 메시지 기능 반영",
-      "history": []
+      "summary": "앱 내 문의하기 기능 반영(수집 항목·이용 목적·보유기간·처리 위탁)",
+      "history": ["2026-09-16"]
     }
   }
 }
