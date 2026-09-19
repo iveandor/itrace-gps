@@ -431,7 +431,8 @@
     margin-top: 2px;
   }
   .info__icon svg { width: 13px; height: 13px; color: #fff; }
-  .info strong { display: block; margin-bottom: 2px; font-weight: 700; font-size: 14px; }
+  .info > div > strong { display: block; margin-bottom: 2px; font-weight: 700; font-size: 14px; }
+  .info p strong, .info li strong { font-weight: 700; color: inherit; }
   .info p { margin: 0; font-size: 14px; color: inherit; line-height: 1.65; }
   .info--tip { background: var(--coral-tint); border-color: rgba(255,122,69,.22); color: #6B3520; }
   .info--tip .info__icon { background: var(--coral); }
@@ -682,7 +683,7 @@
       특히 <strong>백그라운드 위치 추적</strong>은 설정이 잘못되면 앱 화면이 꺼진 상태에서 수집이 중단될 수 있습니다.
     </p>
     <div class="ph__meta">
-      <span class="item"><span class="dot"></span>최종 수정일 <strong>2026. 9. 13.</strong></span>
+      <span class="item"><span class="dot"></span>최종 수정일 <strong>2026. 9. 19.</strong></span>
       <span class="item"><span class="dot"></span>5개 플랫폼별 안내 + 요약표</span>
     </div>
   </div>
@@ -789,6 +790,13 @@
         <ol class="steps">
           <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">권한</span> 을 선택합니다.</div></li>
           <li><div><span class="path">신체 활동</span> (또는 <span class="path">활동 인식</span>) <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
+        </ol>
+
+        <h3>근처 기기 권한 (Android 13 이상)</h3>
+        <p>주변 Wi-Fi 신호로 실내·실외를 판정해 위치 정확도와 배터리 사용을 조절하는 데 필요합니다. 앱을 연동한 뒤 다시 실행할 때 신체 활동·알림 권한과 함께 요청됩니다.</p>
+        <ol class="steps">
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">권한</span> 을 선택합니다.</div></li>
+          <li><div><span class="path">근처 기기</span> <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
         <h3>마이크 권한 (SOS 음성 녹음 · 원격 모니터링)</h3>
@@ -899,6 +907,13 @@
           <li><div><strong>백그라운드 앱 새로 고침</strong>을 활성화합니다.</div></li>
         </ol>
 
+        <h3>알림 권한</h3>
+        <p>보호자 메시지와 연동 해제 안내를 받는 데 필요합니다. "연동하기"를 누른 직후 요청됩니다.</p>
+        <ol class="steps">
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">알림</span> 을 탭합니다.</div></li>
+          <li><div><strong>알림 허용</strong>을 활성화합니다.</div></li>
+        </ol>
+
         <h3>마이크 권한 (SOS 음성 녹음)</h3>
         <p>SOS 발생 시 자동으로 주변 음성을 녹음하는 데 필요합니다. iPhone은 <strong>원격 모니터링을 지원하지 않습니다</strong> — iOS는 화면이 잠기거나 앱이 백그라운드인 상태에서 새 녹음을 시작할 수 없기 때문입니다(원격 모니터링은 갤럭시 워치와 Android 자녀폰에서 지원).</p>
         <ol class="steps">
@@ -948,6 +963,12 @@
           <li><div>워치에서 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">권한</span> <span class="arrow">›</span> <span class="path">마이크</span> <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
         </ol>
 
+        <h3>알림 권한</h3>
+        <p>보호자 메시지와 연동 해제 안내를 받는 데 필요합니다.</p>
+        <ol class="steps">
+          <li><div>워치에서 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace 자녀</span> <span class="arrow">›</span> <span class="path">알림</span> <span class="arrow">›</span> <strong>허용</strong>을 선택합니다.</div></li>
+        </ol>
+
         <h3>배터리 최적화 (갤럭시 워치)</h3>
         <p>Galaxy Watch에서는 앱별 배터리 최적화 해제를 직접 설정할 수 없습니다(시스템 제약). 대신 워치의 <span class="path">설정</span> <span class="arrow">›</span> <span class="path">배터리</span> 에서 절전 모드를 끄고 워치를 충분히 충전된 상태로 유지하면 백그라운드 위치 추적이 안정적으로 동작합니다.</p>
 
@@ -955,7 +976,7 @@
           <span class="info__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke-width="2.5"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg></span>
           <div>
             <strong>앱 내 진단 화면 활용</strong>
-            <p>iTrace 자녀 앱 → 설정 → 진단 화면에서 위치 권한 등 워치에서 변경 가능한 항목은 해당 항목을 탭하면 자동으로 설정 화면으로 이동할 수 있습니다. 단, 배터리 최적화 항목은 Galaxy Watch에서 직접 변경할 수 없어 안내만 표시되며 탭해도 이동하지 않습니다.</p>
+            <p>iTrace 자녀 앱 → 설정 → <strong>앱 진단</strong> 화면에서 위치 권한 등 워치에서 변경 가능한 항목은 해당 항목을 탭하면 자동으로 설정 화면으로 이동할 수 있습니다. 단, 배터리 최적화 항목은 Galaxy Watch에서 직접 변경할 수 없어 안내만 표시되며 탭해도 이동하지 않습니다.</p>
           </div>
         </div>
       </section>
@@ -984,6 +1005,13 @@
         <ol class="steps">
           <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace</span> <span class="arrow">›</span> <span class="path">알림</span> 을 탭합니다.</div></li>
           <li><div><strong>알림 허용</strong>을 활성화합니다. (SOS · 안심존 알림 수신에 필수)</div></li>
+        </ol>
+
+        <h3>배터리 최적화 예외 (권장)</h3>
+        <p>앱을 쓰지 않을 때에도 SOS · 안심존 알림이 늦지 않게 도착하도록, 회원가입 때 배터리 최적화 예외를 함께 요청합니다. 그때 허용하지 않았다면 지도 위쪽의 안내 배너를 누르거나 아래 경로로 설정합니다.</p>
+        <ol class="steps">
+          <li><div><span class="path">설정</span> <span class="arrow">›</span> <span class="path">앱</span> <span class="arrow">›</span> <span class="path">iTrace</span> <span class="arrow">›</span> <span class="path">배터리</span> 를 탭합니다.</div></li>
+          <li><div><strong>제한 없음</strong>을 선택합니다.</div></li>
         </ol>
       </section>
 

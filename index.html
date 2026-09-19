@@ -743,7 +743,7 @@
   }
   /* Bottom tab bar */
   .scr-guard__tabs {
-    display: grid; grid-template-columns: 1fr 1fr 1fr;
+    display: grid; grid-template-columns: 1fr 1fr 1fr 1fr;
     border-top: 1px solid var(--line);
     background: #fff;
     padding: 6px 0 8px;
@@ -1912,7 +1912,7 @@
                   </div>
                   <div class="stats">
                     <div class="stat"><div class="v">93%</div><div class="k">배터리</div></div>
-                    <div class="stat"><div class="v">실외</div><div class="k">GPS</div></div>
+                    <div class="stat"><div class="v">미충전</div><div class="k">충전</div></div>
                     <div class="stat"><div class="v">60분</div><div class="k">주기</div></div>
                     <div class="stat"><div class="v">0</div><div class="k">SOS 요청</div></div>
                   </div>
@@ -1925,6 +1925,10 @@
                   <div class="tab">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 1 0 9-9"/><polyline points="3 4 3 9 8 9"/><polyline points="12 7 12 12 16 14"/></svg>
                     이력
+                  </div>
+                  <div class="tab">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                    메시지
                   </div>
                   <div class="tab">
                     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
@@ -1968,6 +1972,7 @@
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>버튼 하나로 SOS 긴급 발신</li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>배터리 절약 모드 (야간·안심존)</li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>실내외 자동 감지</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>보호자와 메시지 주고받기</li>
         </ul>
       </div>
 
@@ -1990,6 +1995,7 @@
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>안심존 진입·이탈 자동 감지</li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>위치 이력 자동 저장</li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>실내외 자동 감지</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>보호자와 메시지 주고받기</li>
         </ul>
       </div>
 
@@ -2011,6 +2017,7 @@
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>안심존 진입/이탈·예상시각 미도착 알림</li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>여러 자녀·여러 보호자 함께 모니터링</li>
           <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>원격 음성 모니터링 · 기기 찾기</li>
+          <li><span class="tick"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></span>자녀와 메시지 · 앱 안에서 문의</li>
         </ul>
       </div>
     </div>
@@ -2135,6 +2142,33 @@
         <p>날짜별 위치 이력, SOS 세션과 녹화, 모니터링 기록을 회원 탈퇴 없이 직접 영구 삭제할 수 있어 프라이버시에 안심입니다.</p>
         <span class="feat-tile__tier feat-tile__tier--free">전 요금제</span>
       </div>
+
+      <div class="feat-tile reveal" data-delay="0">
+        <div class="feat-tile__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        </div>
+        <h3>보호자 · 자녀 메시지</h3>
+        <p>앱 안에서 자녀와 짧은 메시지를 주고받습니다. 갤럭시 워치에서는 빠른 답장이나 음성으로 바로 답할 수 있고, 대화 내용은 서버에 보관되지 않고 각자의 기기에만 남습니다.</p>
+        <span class="feat-tile__tier feat-tile__tier--free">전 요금제</span>
+      </div>
+
+      <div class="feat-tile reveal" data-delay="1">
+        <div class="feat-tile__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+        </div>
+        <h3>보호자 함께 보기</h3>
+        <p>초대 코드 하나로 배우자·조부모도 각자의 iTrace에서 같은 자녀의 위치와 알림을 함께 봅니다. 초대받은 보호자는 따로 구독하지 않아도 됩니다.</p>
+        <span class="feat-tile__tier feat-tile__tier--free">요금제별 2 · 5 · 10명</span>
+      </div>
+
+      <div class="feat-tile reveal" data-delay="2">
+        <div class="feat-tile__ico">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+        </div>
+        <h3>앱 안에서 바로 문의</h3>
+        <p>궁금한 점이나 불편한 점을 iTrace 설정의 문의하기로 남기면 답변을 알림으로 받습니다. 영업일 기준 7일 이내에 답변드립니다.</p>
+        <span class="feat-tile__tier feat-tile__tier--free">전 요금제</span>
+      </div>
     </div>
   </div>
 </section>
@@ -2226,7 +2260,7 @@
 
     <div class="trial-banner reveal">
       <span class="trial-banner__badge">7일 무료 체험</span>
-      <span class="trial-banner__text">신규 가입 시 <strong>7일간 모든 기능</strong>(원격 모니터링·30일 이력·방문장소 분석·SOS 녹화)을 무료로 체험하세요. <strong>결제 정보 입력이 필요 없습니다.</strong> 체험이 끝나면 구독을 결제해야 계속 이용할 수 있어요(영구 무료 플랜은 없습니다).</span>
+      <span class="trial-banner__text">첫 자녀 기기를 등록한 날부터 <strong>7일간 모든 기능</strong>(원격 모니터링·30일 이력·방문장소 분석·SOS 녹화)을 무료로 체험하세요. <strong>결제 정보 입력이 필요 없습니다.</strong> 체험이 끝나면 구독을 결제해야 계속 이용할 수 있어요(영구 무료 플랜은 없습니다).</span>
     </div>
 
     <div class="plan-grid">
