@@ -3,21 +3,21 @@
   "documents": {
     "terms": {
       "url": "https://itrace.iveandor.com/terms_of_use.html",
-      "version": "2026-09-16",
-      "revisedAt": "2026-09-09",
-      "noticeFrom": "2026-09-09",
+      "version": "2026-09-30",
+      "revisedAt": "2026-09-23",
+      "noticeFrom": "2026-09-23",
       "requiresExplicitConsent": false,
-      "summary": "인앱 메시지 기능 반영(용어 정의·서비스 내용·이용자의 의무·이용 제한)",
-      "history": ["2026-09-08", "2026-05-06"]
+      "summary": "음성 메시지(자녀 → 보호자, 최대 30초) 반영(용어 정의·서비스 내용)",
+      "history": ["2026-09-16", "2026-09-08", "2026-05-06"]
     },
     "privacy": {
       "url": "https://itrace.iveandor.com/privacy_policy.html",
-      "version": "2026-09-26",
-      "revisedAt": "2026-09-19",
-      "noticeFrom": "2026-09-19",
+      "version": "2026-09-30",
+      "revisedAt": "2026-09-23",
+      "noticeFrom": "2026-09-23",
       "requiresExplicitConsent": false,
-      "summary": "앱 내 문의하기 기능 반영(수집 항목·이용 목적·보유기간·처리 위탁)",
-      "history": ["2026-09-16"]
+      "summary": "음성 메시지(자녀 → 보호자) 반영(수집 항목·보유기간·처리 위탁) — 앱 내 문의하기 반영분(09-26 예정) 포함",
+      "history": ["2026-09-26", "2026-09-16"]
     }
   }
 }
