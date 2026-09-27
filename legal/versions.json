@@ -3,21 +3,21 @@
   "documents": {
     "terms": {
       "url": "https://itrace.iveandor.com/terms_of_use.html",
-      "version": "2026-10-03",
-      "revisedAt": "2026-09-26",
-      "noticeFrom": "2026-09-26",
+      "version": "2026-10-05",
+      "revisedAt": "2026-09-27",
+      "noticeFrom": "2026-09-27",
       "requiresExplicitConsent": false,
-      "summary": "위치 조작 감지 알림 반영(서비스 내용) — 음성 메시지 반영분(09-30 예정) 포함",
-      "history": ["2026-09-30", "2026-09-16", "2026-09-08", "2026-05-06"]
+      "summary": "위치 권한 알림 반영(서비스 내용) — 위치 조작 감지 반영분(10-03 예정)·음성 메시지 반영분 포함",
+      "history": ["2026-10-03", "2026-09-30", "2026-09-16", "2026-09-08", "2026-05-06"]
     },
     "privacy": {
       "url": "https://itrace.iveandor.com/privacy_policy.html",
-      "version": "2026-10-03",
-      "revisedAt": "2026-09-26",
-      "noticeFrom": "2026-09-26",
+      "version": "2026-10-05",
+      "revisedAt": "2026-09-27",
+      "noticeFrom": "2026-09-27",
       "requiresExplicitConsent": false,
-      "summary": "위치 조작 감지 반영(수집 항목에 위치 조작 여부 추가·이용 목적) — 음성 메시지·앱 내 문의하기 반영분(09-30 예정) 포함",
-      "history": ["2026-09-30", "2026-09-26", "2026-09-16"]
+      "summary": "위치 권한 알림 반영(기기 상태 정보에 위치 권한·위치 서비스 설정 상태 추가·이용 목적) — 위치 조작 감지·음성 메시지·앱 내 문의하기 반영분 포함",
+      "history": ["2026-10-03", "2026-09-30", "2026-09-26", "2026-09-16"]
     }
   }
 }
