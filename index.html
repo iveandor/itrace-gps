@@ -401,7 +401,7 @@
   .phone__status .right { display: inline-flex; gap: 4px; align-items: center; }
   .phone__status .right svg { width: 11px; height: 11px; }
 
-  /* iTrace 자녀(스마트폰) tracker screen — matches real app screenshot */
+
   .scr-track {
     padding: 38px 18px 14px;
     display: flex; flex-direction: column;
@@ -553,7 +553,7 @@
       linear-gradient(0deg,  rgba(190,170,140,.30) 1px, transparent 1px);
     background-size: 28px 28px, 28px 28px;
   }
-  /* Main yellow avenue (광명로) */
+
   .scr-guard__map::after {
     content: "";
     position: absolute;
@@ -1288,7 +1288,7 @@
   }
 
   /* ============================================================
-     VARIANT CLASSES — driven by Tweaks panel data-attrs on <body>
+     VARIANT CLASSES — driven by data-attrs set on <body> at load
      ============================================================ */
 
   /* Card style variants */
@@ -1414,217 +1414,6 @@
   body[data-show-pill="off"]  .hero__pill,
   body[data-show-stars="off"] .hero__meta { display: none !important; }
 
-  /* ============================================================
-     TWEAKS PANEL
-     ============================================================ */
-  #tweaks {
-    position: fixed; right: 16px; bottom: 16px; z-index: 100;
-    width: 340px; max-height: calc(100vh - 32px);
-    background: #fff;
-    border-radius: 18px;
-    box-shadow: 0 12px 40px rgba(26,26,26,.18), 0 4px 12px rgba(26,26,26,.10);
-    border: 1px solid var(--line);
-    display: none; flex-direction: column;
-    overflow: hidden;
-    font-family: 'Pretendard Variable', 'Pretendard', -apple-system, sans-serif;
-    color: var(--ink);
-  }
-  #tweaks.is-open { display: flex; }
-  @media (max-width: 480px) {
-    #tweaks { right: 8px; left: 8px; width: auto; bottom: 8px; }
-  }
-  .tw-head {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 14px 16px;
-    border-bottom: 1px solid var(--line);
-    background: var(--cream);
-  }
-  .tw-head__title {
-    font-size: 14px; font-weight: 700; letter-spacing: -.01em;
-    display: inline-flex; align-items: center; gap: 8px;
-  }
-  .tw-head__title::before {
-    content: ""; width: 8px; height: 8px; border-radius: 50%;
-    background: var(--coral);
-  }
-  .tw-head__actions { display: flex; gap: 4px; }
-  .tw-icon-btn {
-    width: 28px; height: 28px; border-radius: 8px;
-    display: grid; place-items: center;
-    color: var(--ink-muted);
-    transition: background-color .15s, color .15s;
-  }
-  .tw-icon-btn:hover { background: rgba(26,26,26,.06); color: var(--ink); }
-  .tw-icon-btn svg { width: 16px; height: 16px; }
-  .tw-body {
-    overflow-y: auto;
-    padding: 4px 0 12px;
-    scrollbar-width: thin;
-  }
-  .tw-body::-webkit-scrollbar { width: 6px; }
-  .tw-body::-webkit-scrollbar-thumb { background: rgba(26,26,26,.16); border-radius: 3px; }
-
-  .tw-section { border-bottom: 1px solid var(--line); }
-  .tw-section:last-child { border-bottom: none; }
-  .tw-section__head {
-    display: flex; align-items: center; justify-content: space-between;
-    padding: 12px 16px;
-    cursor: pointer;
-    user-select: none;
-    font-size: 12.5px; font-weight: 700;
-    color: var(--ink);
-    letter-spacing: -.005em;
-  }
-  .tw-section__head:hover { background: rgba(26,26,26,.03); }
-  .tw-section__head .chev {
-    transition: transform .2s var(--ease);
-    color: var(--ink-muted);
-  }
-  .tw-section__head .chev svg { width: 14px; height: 14px; }
-  .tw-section.is-open .chev { transform: rotate(180deg); }
-  .tw-section__body {
-    display: none;
-    padding: 0 16px 14px;
-  }
-  .tw-section.is-open .tw-section__body { display: block; }
-
-  .tw-row {
-    display: flex; flex-direction: column; gap: 6px;
-    padding: 8px 0;
-  }
-  .tw-row + .tw-row { border-top: 1px dashed var(--line); }
-  .tw-row__label {
-    font-size: 11.5px; font-weight: 600;
-    color: var(--ink-muted);
-    display: flex; justify-content: space-between; align-items: center;
-  }
-  .tw-row__value {
-    font-size: 11px; color: var(--ink-faint);
-    font-variant-numeric: tabular-nums;
-  }
-
-  /* Swatches */
-  .tw-swatches { display: flex; gap: 6px; flex-wrap: wrap; }
-  .tw-swatch {
-    width: 28px; height: 28px; border-radius: 8px;
-    cursor: pointer; padding: 0;
-    border: 2px solid transparent;
-    box-shadow: inset 0 0 0 1px rgba(0,0,0,.08);
-    transition: transform .15s, border-color .15s;
-  }
-  .tw-swatch:hover { transform: scale(1.1); }
-  .tw-swatch.is-active { border-color: var(--ink); }
-
-  /* Radio segmented */
-  .tw-radio {
-    display: flex;
-    background: var(--cream);
-    border-radius: 8px;
-    padding: 2px;
-    gap: 2px;
-  }
-  .tw-radio__opt {
-    flex: 1;
-    height: 28px;
-    border-radius: 6px;
-    font-size: 11.5px; font-weight: 500;
-    color: var(--ink-muted);
-    cursor: pointer;
-    transition: background-color .15s, color .15s;
-  }
-  .tw-radio__opt:hover { color: var(--ink); }
-  .tw-radio__opt.is-active {
-    background: #fff;
-    color: var(--ink);
-    box-shadow: 0 1px 3px rgba(26,26,26,.08);
-    font-weight: 600;
-  }
-  .tw-radio--stack { flex-wrap: wrap; }
-  .tw-radio--stack .tw-radio__opt { flex: 1 1 calc(33% - 2px); min-width: 60px; }
-
-  /* Slider */
-  .tw-slider {
-    -webkit-appearance: none; appearance: none;
-    width: 100%; height: 4px;
-    background: var(--line-strong);
-    border-radius: 2px;
-    outline: none;
-  }
-  .tw-slider::-webkit-slider-thumb {
-    -webkit-appearance: none; appearance: none;
-    width: 16px; height: 16px; border-radius: 50%;
-    background: var(--coral);
-    cursor: pointer;
-    box-shadow: 0 2px 6px rgba(255,122,69,.4);
-    transition: transform .15s;
-  }
-  .tw-slider::-webkit-slider-thumb:hover { transform: scale(1.15); }
-  .tw-slider::-moz-range-thumb {
-    width: 16px; height: 16px; border-radius: 50%;
-    background: var(--coral); cursor: pointer; border: none;
-    box-shadow: 0 2px 6px rgba(255,122,69,.4);
-  }
-
-  /* Toggle */
-  .tw-toggle {
-    width: 36px; height: 20px; border-radius: 999px;
-    background: var(--line-strong);
-    position: relative;
-    cursor: pointer;
-    transition: background-color .2s;
-  }
-  .tw-toggle::after {
-    content: "";
-    position: absolute; left: 2px; top: 2px;
-    width: 16px; height: 16px; border-radius: 50%;
-    background: #fff;
-    box-shadow: 0 1px 3px rgba(0,0,0,.2);
-    transition: transform .2s var(--ease);
-  }
-  .tw-toggle.is-on { background: var(--coral); }
-  .tw-toggle.is-on::after { transform: translateX(16px); }
-  .tw-row--inline { flex-direction: row; align-items: center; justify-content: space-between; }
-  .tw-row--inline .tw-row__label { margin: 0; }
-
-  /* Text input */
-  .tw-input {
-    width: 100%;
-    padding: 8px 10px;
-    border-radius: 8px;
-    border: 1px solid var(--line-strong);
-    background: #fff;
-    font-family: inherit; font-size: 12.5px;
-    color: var(--ink);
-    transition: border-color .15s;
-  }
-  .tw-input:focus { outline: none; border-color: var(--coral); }
-  .tw-input--ta { min-height: 56px; resize: vertical; line-height: 1.5; }
-
-  /* Floating toggle button when panel closed */
-  #tw-fab {
-    position: fixed; right: 16px; bottom: 16px; z-index: 99;
-    width: 48px; height: 48px; border-radius: 14px;
-    background: var(--ink); color: #fff;
-    display: none; place-items: center;
-    box-shadow: 0 8px 20px rgba(26,26,26,.25);
-    transition: transform .2s var(--ease);
-  }
-  #tw-fab:hover { transform: translateY(-2px) rotate(15deg); }
-  #tw-fab.is-visible { display: grid; }
-  #tw-fab svg { width: 22px; height: 22px; }
-
-  .tw-reset {
-    width: 100%;
-    height: 32px;
-    border-radius: 8px;
-    background: var(--cream);
-    color: var(--ink-2);
-    font-size: 12px; font-weight: 600;
-    margin: 8px 16px 4px;
-    width: calc(100% - 32px);
-    transition: background-color .15s;
-  }
-  .tw-reset:hover { background: var(--coral-tint); color: var(--coral-dark); }
   /* ---------- Launch coming-soon modal ---------- */
   .launch-modal {
     position: fixed; inset: 0; z-index: 1000;
@@ -2088,7 +1877,7 @@
         <span class="feat-tile__tier feat-tile__tier--free">전 요금제</span>
       </div>
 
-      <!-- 추가 기능 (iTrace 구현 기능 반영) -->
+      
       <div class="feat-tile reveal">
         <div class="feat-tile__ico">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 14v-2a9 9 0 0 1 18 0v2"/><rect x="2" y="14" width="5" height="7" rx="2"/><rect x="17" y="14" width="5" height="7" rx="2"/></svg>
@@ -2264,7 +2053,6 @@
     </div>
 
     <div class="plan-grid">
-      <!-- 영구 Free 플랜 제거(2026-06-23): 7일 무료 체험 후 아래 유료 구독 필요, 영구 무료 없음 -->
 
       <!-- Basic -->
       <div class="plan-card reveal" data-delay="1">
@@ -2539,7 +2327,6 @@
       if (e.key === 'Escape' && modal.classList.contains('is-open')) closeModal();
     });
 
-    // 아직 미출시 스토어의 버튼(href="#")만 — 클릭 시 출시 안내 모달 표시
     document.querySelectorAll('.store-btn[href="#"]').forEach(function (btn) {
       btn.addEventListener('click', function (e) { e.preventDefault(); openModal(); });
     });
@@ -2551,26 +2338,6 @@
   })();
 </script>
 
-<!-- ============================================================
-     TWEAKS PANEL
-     ============================================================ -->
-<div id="tweaks" role="dialog" aria-label="Tweaks panel">
-  <div class="tw-head">
-    <span class="tw-head__title">Tweaks</span>
-    <div class="tw-head__actions">
-      <button class="tw-icon-btn" id="tw-reset-btn" title="Reset to defaults">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 12a9 9 0 0 1 15-6.7L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 0 1-15 6.7L3 16"/><path d="M3 21v-5h5"/></svg>
-      </button>
-      <button class="tw-icon-btn" id="tw-close-btn" title="Close">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M6 6l12 12M18 6L6 18"/></svg>
-      </button>
-    </div>
-  </div>
-  <div class="tw-body" id="tw-body"></div>
-</div>
-
-<button id="tw-fab" title="Open Tweaks" aria-label="Open Tweaks panel">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09a1.65 1.65 0 0 0-1-1.51 1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09a1.65 1.65 0 0 0 1.51-1 1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33h0a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82v0a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
 </button>
 
 <script>
@@ -2603,9 +2370,9 @@
   });
 
   /* ===========================================================
-     TWEAKS — defaults, state, controls, apply, persist
+     THEME DEFAULTS — applied at load (colors · type · layout · variants)
      =========================================================== */
-  const TWEAK_DEFAULTS = /*EDITMODE-BEGIN*/{
+  const TWEAK_DEFAULTS = {
     "primaryColor": "#FF7A45",
     "primaryDark": "#E05A25",
     "bgTone": "cream",
@@ -2650,21 +2417,9 @@
     "showWatch": "on",
     "showTrack": "on",
     "showGuard": "on"
-  }/*EDITMODE-END*/;
+  };
 
   let tweaks = { ...TWEAK_DEFAULTS };
-
-  // -- Color palette presets for swatch shortcuts
-  const COLOR_PRESETS = [
-    { name: 'Coral',    primary: '#FF7A45', dark: '#E05A25' },
-    { name: 'Indigo',   primary: '#5B6CF5', dark: '#3A4BD0' },
-    { name: 'Forest',   primary: '#2E9D6B', dark: '#1F7A52' },
-    { name: 'Plum',     primary: '#A14BC9', dark: '#7C2FA5' },
-    { name: 'Rose',     primary: '#E94F77', dark: '#C0335C' },
-    { name: 'Slate',    primary: '#475569', dark: '#1E293B' },
-    { name: 'Sunset',   primary: '#F59E0B', dark: '#D97706' },
-    { name: 'Ocean',    primary: '#0EA5E9', dark: '#0369A1' }
-  ];
 
   const BG_TONES = {
     cream:    { bg: '#FBF6EF', deep: '#F4EDE1' },
@@ -2820,319 +2575,7 @@
     return String(s).replace(/[&<>"']/g, m => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[m]));
   }
 
-  /* -----------------------------------------------------------
-     Persist
-     ----------------------------------------------------------- */
-  function setTweak(key, value) {
-    tweaks[key] = value;
-    apply();
-    try {
-      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { [key]: value } }, '*');
-    } catch(e) {}
-    // Refresh active state of controls
-    refreshControls(key);
-  }
-
-  /* -----------------------------------------------------------
-     Build controls
-     ----------------------------------------------------------- */
-  const body = document.getElementById('tw-body');
-
-  // Schema for every tweak control
-  const SCHEMA = [
-    { sec: '팔레트 프리셋', icon: 'palette', items: [
-      { type: 'preset', label: '컬러 프리셋' }
-    ]},
-    { sec: '색상', icon: 'droplet', items: [
-      { type: 'color',   key: 'primaryColor', label: '메인 컬러',
-        swatches: ['#FF7A45','#5B6CF5','#2E9D6B','#A14BC9','#E94F77','#0EA5E9','#475569','#F59E0B','#005EEB'] },
-      { type: 'color',   key: 'primaryDark',  label: '메인 어두운 톤',
-        swatches: ['#E05A25','#3A4BD0','#1F7A52','#7C2FA5','#C0335C','#0369A1','#1E293B','#D97706','#003FA8'] },
-      { type: 'color',   key: 'sosColor',     label: 'SOS 색상',
-        swatches: ['#FF4242','#E11D48','#DC2626','#F59E0B','#000000'] },
-      { type: 'radio',   key: 'bgTone', label: '배경 톤',
-        options: [['cream','크림'],['white','화이트'],['sand','샌드'],['pearl','펄'],['mint','민트'],['charcoal','다크']] }
-    ]},
-    { sec: '타이포그래피', icon: 'type', items: [
-      { type: 'radio', key: 'fontFamily', label: '서체',
-        options: [['pretendard','Pretendard'],['inter','Inter'],['plex','IBM Plex'],['serif','Serif'],['system','System']] },
-      { type: 'slider', key: 'heroScale', label: '히어로 크기', min: 0.7, max: 1.5, step: 0.05, suffix: '×' },
-      { type: 'radio', key: 'bodyWeight', label: '본문 굵기',
-        options: [[400,'400'],[450,'450'],[500,'500'],[600,'600']] },
-      { type: 'radio', key: 'headingWeight', label: '제목 굵기',
-        options: [[600,'600'],[700,'700'],[800,'800'],[900,'900']] },
-      { type: 'slider', key: 'letterSpacing', label: '자간', min: -0.06, max: 0.04, step: 0.005, suffix: 'em' },
-      { type: 'slider', key: 'lineHeight', label: '행간', min: 1.3, max: 1.9, step: 0.05 }
-    ]},
-    { sec: '레이아웃', icon: 'layout', items: [
-      { type: 'slider', key: 'containerWidth', label: '최대 너비', min: 960, max: 1400, step: 20, suffix: 'px' },
-      { type: 'slider', key: 'sectionPadding', label: '섹션 여백', min: 48, max: 160, step: 8, suffix: 'px' },
-      { type: 'slider', key: 'cardRadius', label: '카드 모서리', min: 0, max: 36, step: 2, suffix: 'px' },
-      { type: 'slider', key: 'cardPadding', label: '카드 패딩', min: 16, max: 48, step: 2, suffix: 'px' },
-      { type: 'slider', key: 'gridGap', label: '그리드 간격', min: 8, max: 36, step: 2, suffix: 'px' },
-      { type: 'radio', key: 'btnShape', label: '버튼 모양',
-        options: [['pill','Pill'],['rounded','Rounded'],['square','Square']] }
-    ]},
-    { sec: '효과 & 모션', icon: 'sparkles', items: [
-      { type: 'radio', key: 'shadow', label: '그림자 강도',
-        options: [['none','None'],['subtle','약함'],['normal','보통'],['strong','강함']] },
-      { type: 'slider', key: 'hoverLift', label: '호버 리프트', min: 0, max: 14, step: 1, suffix: 'px' },
-      { type: 'radio', key: 'heroBg', label: '히어로 배경',
-        options: [['off','Off'],['subtle','약함'],['normal','보통'],['vivid','강함']] },
-      { type: 'toggle', key: 'animations',  label: '전체 애니메이션' },
-      { type: 'toggle', key: 'deviceFloat', label: '기기 부유 애니메이션' },
-      { type: 'toggle', key: 'heroPulse',   label: '히어로 라이브 점' },
-      { type: 'toggle', key: 'sosPulse',    label: 'SOS 펄스' },
-      { type: 'toggle', key: 'pinPing',     label: '지도 핀 핑' }
-    ]},
-    { sec: '히어로 콘텐츠', icon: 'edit', items: [
-      { type: 'text',  key: 'heroTitleLine1', label: '제목 1행' },
-      { type: 'text',  key: 'heroTitleLine2', label: '제목 2행 (강조)' },
-      { type: 'textarea', key: 'heroSub',     label: '서브 카피' },
-      { type: 'radio', key: 'heroLayout', label: '히어로 레이아웃',
-        options: [['split','분할'],['center','중앙']] },
-      { type: 'toggle', key: 'showPill',  label: '플로팅 뱃지' },
-      { type: 'toggle', key: 'showStars', label: '별점 + 사용자 수' }
-    ]},
-    { sec: '컴포넌트 스타일', icon: 'box', items: [
-      { type: 'radio', key: 'cardStyle', label: '카드 스타일',
-        options: [['filled','채움'],['outlined','외곽선'],['soft','소프트'],['flat','플랫']] },
-      { type: 'radio', key: 'iconStyle', label: '앱 아이콘',
-        options: [['tinted','틴티드'],['solid','솔리드'],['outlined','외곽선']] },
-      { type: 'radio', key: 'tagStyle',  label: '태그 스타일',
-        options: [['upper','대문자'],['lower','일반'],['hide','숨김']] },
-      { type: 'radio', key: 'ctaGrad',   label: 'CTA 배경',
-        options: [['coral','코랄'],['dark','다크'],['warm','웜'],['cream','크림']] }
-    ]},
-    { sec: '섹션 표시', icon: 'eye', items: [
-      { type: 'toggle', key: 'showApps', label: '세 가지 앱' },
-      { type: 'toggle', key: 'showFeat', label: '핵심 기능' },
-      { type: 'toggle', key: 'showHow',  label: '사용 방법' },
-      { type: 'toggle', key: 'showTech', label: '기술 뱃지' },
-      { type: 'toggle', key: 'showCta',  label: 'CTA 다운로드' }
-    ]},
-    { sec: '히어로 디바이스', icon: 'smartphone', items: [
-      { type: 'toggle', key: 'showWatch', label: '워치 (iTrace 자녀)' },
-      { type: 'toggle', key: 'showTrack', label: '스마트폰 (iTrace 자녀)' },
-      { type: 'toggle', key: 'showGuard', label: '보호자 (iTrace)' }
-    ]}
-  ];
-
-  const ICONS = {
-    palette: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="13.5" cy="6.5" r="1.5"/><circle cx="17.5" cy="10.5" r="1.5"/><circle cx="8.5" cy="7.5" r="1.5"/><circle cx="6.5" cy="12.5" r="1.5"/><path d="M12 2C6.5 2 2 6.5 2 12s4.5 10 10 10c.83 0 1.5-.67 1.5-1.5 0-.39-.15-.74-.39-1.01-.23-.26-.38-.62-.38-1.01 0-.83.67-1.5 1.5-1.5H16c3.31 0 6-2.69 6-6 0-4.97-4.5-9-10-9z"/></svg>',
-    droplet: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0L12 2.69z"/></svg>',
-    type:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="4 7 4 4 20 4 20 7"/><line x1="9" y1="20" x2="15" y2="20"/><line x1="12" y1="4" x2="12" y2="20"/></svg>',
-    layout:  '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="9" y1="21" x2="9" y2="9"/></svg>',
-    sparkles:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.6L19 10l-5.1 1.4L12 17l-1.9-5.6L5 10l5.1-1.4z"/></svg>',
-    edit:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M11 4H4a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-7"/><path d="M18.5 2.5a2.121 2.121 0 0 1 3 3L12 15l-4 1 1-4 9.5-9.5z"/></svg>',
-    box:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/></svg>',
-    eye:     '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>',
-    smartphone: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="2"/><line x1="12" y1="18" x2="12" y2="18"/></svg>',
-    chev:    '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'
-  };
-
-  function buildPanel() {
-    body.innerHTML = '';
-    SCHEMA.forEach((section, sIdx) => {
-      const sec = document.createElement('div');
-      sec.className = 'tw-section' + (sIdx === 0 ? ' is-open' : '');
-
-      const head = document.createElement('button');
-      head.className = 'tw-section__head';
-      head.type = 'button';
-      head.innerHTML = `<span style="display:inline-flex;align-items:center;gap:8px;">
-        <span style="color:var(--coral);display:inline-flex">${ICONS[section.icon] || ''}</span>
-        ${section.sec}
-      </span><span class="chev">${ICONS.chev}</span>`;
-      head.addEventListener('click', () => sec.classList.toggle('is-open'));
-      sec.appendChild(head);
-
-      const sbody = document.createElement('div');
-      sbody.className = 'tw-section__body';
-      section.items.forEach(item => sbody.appendChild(buildControl(item)));
-      sec.appendChild(sbody);
-      body.appendChild(sec);
-    });
-  }
-
-  function buildControl(item) {
-    const row = document.createElement('div');
-    if (item.type === 'preset') {
-      row.className = 'tw-row';
-      row.innerHTML = `<span class="tw-row__label">${item.label}</span>`;
-      const list = document.createElement('div');
-      list.className = 'tw-swatches';
-      COLOR_PRESETS.forEach(p => {
-        const sw = document.createElement('button');
-        sw.className = 'tw-swatch';
-        sw.style.background = `linear-gradient(135deg, ${p.primary}, ${p.dark})`;
-        sw.title = p.name;
-        sw.addEventListener('click', () => {
-          tweaks.primaryColor = p.primary;
-          tweaks.primaryDark  = p.dark;
-          apply();
-          try { window.parent.postMessage({ type:'__edit_mode_set_keys', edits:{ primaryColor:p.primary, primaryDark:p.dark } }, '*'); } catch(e) {}
-          refreshControls('primaryColor'); refreshControls('primaryDark');
-        });
-        list.appendChild(sw);
-      });
-      row.appendChild(list);
-      return row;
-    }
-    if (item.type === 'color') {
-      row.className = 'tw-row';
-      row.innerHTML = `<span class="tw-row__label">${item.label}<span class="tw-row__value" data-val="${item.key}">${tweaks[item.key]}</span></span>`;
-      const list = document.createElement('div');
-      list.className = 'tw-swatches';
-      list.dataset.ctlKey = item.key;
-      (item.swatches || []).forEach(c => {
-        const sw = document.createElement('button');
-        sw.className = 'tw-swatch';
-        sw.style.background = c;
-        sw.dataset.value = c;
-        if (c.toLowerCase() === tweaks[item.key].toLowerCase()) sw.classList.add('is-active');
-        sw.addEventListener('click', () => setTweak(item.key, c));
-        list.appendChild(sw);
-      });
-      // custom picker
-      const pick = document.createElement('input');
-      pick.type = 'color'; pick.value = tweaks[item.key];
-      pick.style.cssText = 'width:28px;height:28px;padding:0;border:2px solid transparent;border-radius:8px;cursor:pointer;background:transparent;';
-      pick.addEventListener('input', e => setTweak(item.key, e.target.value));
-      list.appendChild(pick);
-      row.appendChild(list);
-      return row;
-    }
-    if (item.type === 'radio') {
-      row.className = 'tw-row';
-      row.innerHTML = `<span class="tw-row__label">${item.label}</span>`;
-      const grp = document.createElement('div');
-      grp.className = 'tw-radio' + (item.options.length > 4 ? ' tw-radio--stack' : '');
-      grp.dataset.ctlKey = item.key;
-      item.options.forEach(([val, label]) => {
-        const o = document.createElement('button');
-        o.className = 'tw-radio__opt' + (String(tweaks[item.key]) === String(val) ? ' is-active' : '');
-        o.type = 'button'; o.textContent = label; o.dataset.value = val;
-        o.addEventListener('click', () => setTweak(item.key, typeof tweaks[item.key] === 'number' ? Number(val) : val));
-        grp.appendChild(o);
-      });
-      row.appendChild(grp);
-      return row;
-    }
-    if (item.type === 'slider') {
-      row.className = 'tw-row';
-      const cur = tweaks[item.key];
-      const suffix = item.suffix || '';
-      row.innerHTML = `<span class="tw-row__label">${item.label}<span class="tw-row__value" data-val="${item.key}">${cur}${suffix}</span></span>`;
-      const slider = document.createElement('input');
-      slider.type = 'range';
-      slider.className = 'tw-slider';
-      slider.min = item.min; slider.max = item.max; slider.step = item.step;
-      slider.value = cur;
-      slider.dataset.ctlKey = item.key;
-      slider.addEventListener('input', e => {
-        const v = Number(e.target.value);
-        setTweak(item.key, v);
-      });
-      row.appendChild(slider);
-      return row;
-    }
-    if (item.type === 'toggle') {
-      row.className = 'tw-row tw-row--inline';
-      row.innerHTML = `<span class="tw-row__label">${item.label}</span>`;
-      const tog = document.createElement('button');
-      tog.className = 'tw-toggle' + (tweaks[item.key] === 'on' ? ' is-on' : '');
-      tog.type = 'button';
-      tog.dataset.ctlKey = item.key;
-      tog.addEventListener('click', () => setTweak(item.key, tweaks[item.key] === 'on' ? 'off' : 'on'));
-      row.appendChild(tog);
-      return row;
-    }
-    if (item.type === 'text') {
-      row.className = 'tw-row';
-      row.innerHTML = `<span class="tw-row__label">${item.label}</span>`;
-      const inp = document.createElement('input');
-      inp.className = 'tw-input'; inp.type = 'text'; inp.value = tweaks[item.key];
-      inp.dataset.ctlKey = item.key;
-      inp.addEventListener('input', e => setTweak(item.key, e.target.value));
-      row.appendChild(inp);
-      return row;
-    }
-    if (item.type === 'textarea') {
-      row.className = 'tw-row';
-      row.innerHTML = `<span class="tw-row__label">${item.label}</span>`;
-      const inp = document.createElement('textarea');
-      inp.className = 'tw-input tw-input--ta';
-      inp.value = tweaks[item.key];
-      inp.dataset.ctlKey = item.key;
-      inp.addEventListener('input', e => setTweak(item.key, e.target.value));
-      row.appendChild(inp);
-      return row;
-    }
-    return row;
-  }
-
-  function refreshControls(key) {
-    // value label
-    document.querySelectorAll(`[data-val="${key}"]`).forEach(el => {
-      const suffix = el.textContent.replace(/^[-\d.]+/, '').replace(/^#?[\dA-Fa-f]+/, '');
-      el.textContent = tweaks[key] + (typeof tweaks[key] === 'string' && tweaks[key].startsWith('#') ? '' : suffix);
-      if (typeof tweaks[key] === 'string' && tweaks[key].startsWith('#')) el.textContent = tweaks[key];
-    });
-    // swatches
-    document.querySelectorAll(`[data-ctl-key="${key}"] .tw-swatch`).forEach(sw => {
-      sw.classList.toggle('is-active', sw.dataset.value && sw.dataset.value.toLowerCase() === String(tweaks[key]).toLowerCase());
-    });
-    // radio
-    document.querySelectorAll(`.tw-radio[data-ctl-key="${key}"] .tw-radio__opt`).forEach(o => {
-      o.classList.toggle('is-active', String(o.dataset.value) === String(tweaks[key]));
-    });
-    // toggle
-    const tog = document.querySelector(`.tw-toggle[data-ctl-key="${key}"]`);
-    if (tog) tog.classList.toggle('is-on', tweaks[key] === 'on');
-    // slider
-    const sl = document.querySelector(`.tw-slider[data-ctl-key="${key}"]`);
-    if (sl && Number(sl.value) !== tweaks[key]) sl.value = tweaks[key];
-  }
-
-  /* -----------------------------------------------------------
-     Panel open/close + host protocol
-     ----------------------------------------------------------- */
-  const panel = document.getElementById('tweaks');
-  const fab   = document.getElementById('tw-fab');
-
-  function openPanel()  { panel.classList.add('is-open');  fab.classList.remove('is-visible'); }
-  function closePanel() {
-    panel.classList.remove('is-open');
-    fab.classList.add('is-visible');
-    try { window.parent.postMessage({ type: '__edit_mode_dismissed' }, '*'); } catch(e) {}
-  }
-  document.getElementById('tw-close-btn').addEventListener('click', closePanel);
-  fab.addEventListener('click', openPanel);
-
-  document.getElementById('tw-reset-btn').addEventListener('click', () => {
-    tweaks = { ...TWEAK_DEFAULTS };
-    apply();
-    buildPanel();
-    try {
-      window.parent.postMessage({ type: '__edit_mode_set_keys', edits: { ...TWEAK_DEFAULTS } }, '*');
-    } catch(e) {}
-  });
-
-  // Protocol: register listener FIRST, then announce availability
-  window.addEventListener('message', (e) => {
-    const d = e && e.data;
-    if (!d || typeof d !== 'object') return;
-    if (d.type === '__activate_edit_mode')   openPanel();
-    if (d.type === '__deactivate_edit_mode') {
-      panel.classList.remove('is-open');
-      fab.classList.remove('is-visible');
-    }
-  });
-  try { window.parent.postMessage({ type: '__edit_mode_available' }, '*'); } catch(e) {}
-
-  // Initial build + apply
-  buildPanel();
+  // Apply theme defaults
   apply();
 </script>
 </body>

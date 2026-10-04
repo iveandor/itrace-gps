@@ -1,8 +1,10 @@
 .DS_Store
 
-# AI
+# 공개 저장소 — 운영 메모·AI 도구 산출물은 올리지 않는다 (정본: iLogTerraform/docs/marketing/itrace-gps-todo.md)
+TODO.md
 .claude
 docs/
 .bkit-*
 .bkit
+CLAUDE.md
 CLAUDE.MD
