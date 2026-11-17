@@ -1140,6 +1140,23 @@
   .trial-banner__text { font-size: 13.5px; color: var(--coral-deep); line-height: 1.6; font-weight: 500; }
   .trial-banner__text strong { font-weight: 700; }
 
+  /* ---------- Guides ---------- */
+  .guides { background: var(--surface); }
+  .guide-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 16px; }
+  @media (max-width: 960px) { .guide-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+  @media (max-width: 600px) { .guide-grid { grid-template-columns: 1fr; } }
+  .gcard { display: flex; flex-direction: column; gap: 8px; padding: 24px 22px; border-radius: 20px; background: var(--cream); border: 1px solid var(--line); transition: transform .25s var(--ease), box-shadow .25s var(--ease); }
+  .gcard:hover { transform: translateY(-4px); box-shadow: var(--shadow-2); }
+  .gcard--featured { background: linear-gradient(135deg, #FFF1E6 0%, #FFE6D6 100%); border-color: rgba(255,122,69,.25); }
+  .gcard__icon { width: 40px; height: 40px; border-radius: 12px; display: grid; place-items: center; background: #fff; color: var(--coral-dark); margin-bottom: 6px; }
+  .gcard__icon svg { width: 20px; height: 20px; }
+  .gcard__tag { font-size: 12px; font-weight: 600; color: var(--coral-dark); }
+  .gcard__title { font-size: 17px; font-weight: 700; color: var(--ink); line-height: 1.35; letter-spacing: -.01em; word-break: keep-all; }
+  .gcard__desc { font-size: 14px; color: var(--ink-muted); line-height: 1.6; }
+  .gcard__more { margin-top: auto; padding-top: 8px; display: inline-flex; align-items: center; gap: 6px; font-size: 13.5px; font-weight: 600; color: var(--coral-dark); }
+  .gcard__more svg { width: 14px; height: 14px; }
+  .guides__all { display: flex; justify-content: center; margin-top: 32px; }
+
   /* ---------- CTA download ---------- */
   .cta {
     background:
@@ -1522,6 +1539,7 @@
       <a href="#features">앱 소개</a>
       <a href="#how">설치 방법</a>
       <a href="#pricing">요금제</a>
+      <a href="#guides">가이드</a>
       <a href="#cta">문의</a>
     </div>
     <div class="nav__cta">
@@ -2138,6 +2156,50 @@
   </div>
 </section>
 
+<!-- ========== GUIDES ========== -->
+<section class="guides" id="guides">
+  <div class="container">
+    <div class="section-head reveal">
+      <span class="eyebrow">가이드</span>
+      <h2 class="h-section">알아두면 좋은 가이드</h2>
+      <p class="lead">처음 시작할 때, 설정이 막힐 때 읽어 보세요.</p>
+    </div>
+    <div class="guide-grid reveal">
+      <a class="gcard gcard--featured" href="spare_phone_guide.html">
+        <span class="gcard__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="2" width="14" height="20" rx="3"></rect><path d="M10 18h4"></path></svg></span>
+        <span class="gcard__tag">알아두면 좋은 정보</span>
+        <strong class="gcard__title">안 쓰는 폰(공기계)으로 아이 위치 확인하기</strong>
+        <span class="gcard__desc">새 키즈폰을 사기 전에, 서랍 속 공기계로 시작하는 방법. 유심·Wi-Fi 연결 조건과 할 수 없는 것까지.</span>
+        <span class="gcard__more">읽어 보기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+      </a>
+      <a class="gcard" href="user_guide.html">
+        <span class="gcard__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg></span>
+        <span class="gcard__tag">사용 가이드</span>
+        <strong class="gcard__title">사용자 가이드</strong>
+        <span class="gcard__desc">가입부터 안심존·SOS·메시지·위치 이력까지 iTrace 전체 사용법과 자주 묻는 질문.</span>
+        <span class="gcard__more">읽어 보기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+      </a>
+      <a class="gcard" href="pairing_guide.html">
+        <span class="gcard__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg></span>
+        <span class="gcard__tag">사용 가이드</span>
+        <strong class="gcard__title">자녀 스마트폰 연동 가이드</strong>
+        <span class="gcard__desc">보호자 앱의 8자리 초대 코드로 자녀 스마트폰을 연결하는 방법을 화면과 함께 안내합니다.</span>
+        <span class="gcard__more">읽어 보기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+      </a>
+      <a class="gcard" href="permissions_guide.html">
+        <span class="gcard__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3v6c0 5-3.5 8.5-8 9-4.5-.5-8-4-8-9V6l8-3z"></path><path d="M9 12l2 2 4-4"></path></svg></span>
+        <span class="gcard__tag">사용 가이드</span>
+        <strong class="gcard__title">기기 권한 설정 가이드</strong>
+        <span class="gcard__desc">위치 "항상 허용"·배터리 최적화 제외 등 기기별로 꼭 필요한 권한 설정 방법.</span>
+        <span class="gcard__more">읽어 보기<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"></path><path d="M13 6l6 6-6 6"></path></svg></span>
+      </a>
+    </div>
+    <div class="guides__all">
+      <a class="btn btn--outline btn--lg" href="guides.html">가이드 전체 보기</a>
+    </div>
+  </div>
+</section>
+
 <!-- ========== CTA ========== -->
 <section id="cta" style="padding: 0;">
   <div class="cta reveal">
@@ -2254,6 +2316,7 @@
 </a>
         <a href="pairing_guide.html">연동 가이드</a>
         <a href="permissions_guide.html">기기 권한 설정 가이드</a>
+        <a href="guides.html">가이드 모음</a>
         <a href="account_deletion.html">계정 삭제</a>
       </div>
     </div>
